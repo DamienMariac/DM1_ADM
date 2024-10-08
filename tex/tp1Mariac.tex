@@ -14,10 +14,12 @@
     \includegraphics[width=0.5\textwidth]{ssd_logo.png} 
 \end{figure}
 
+\newpage
 \tableofcontents
+\newpage
 
 \section{Introduction}
-On dispose d’un jeu de donnees présentant une étude de 27 espèces d'arbres dans 1000 parcelles d'une forêt.
+On dispose d'un jeu de donnees présentant une étude de 27 espèces d'arbres dans 1000 parcelles d'une forêt.
 Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt du bassin du Congo.
 Nous disposons dans notre jeu de donnée 30 variables quantitatives dont : 27 variables de comptage des espèces, la surface de la parcelle, 2 variables une forestier et une géologique.
 Et une variable qualitative "code".
@@ -26,13 +28,17 @@ Et une variable qualitative "code".
 \subsection{inertie et barycentre}
 
 Nous cherchons à calculer la densité de peuplement de chaque espece par unité de surface.
-Nous utilisons des densités plutôt que des comptages car cela permet de normaliser les données par rapport à la taille de la parcelle,
+Nous utiliserons des densités plutôt que des comptages car cela permet de normaliser les données par rapport à la taille de la parcelle,
 ce qui rend les comparaisons entre les parcelles équitables.
-
+\\
 Nous devons centrer et reduire les variables quantitatives dans le but de mieux comparer celles qui decrivent les différents densité.
+Nous allons alors utiliser :
+\[
+(x_j^i)_{1 \leq i \leq 27} = \frac{x_j^i - \bar{x}_j}{\sigma_j}
+\]
 
-Nous allons alors utiliser : $(x_j^i)_{1 \leq i \leq 27} = \frac{x_j^i - \bar{x}_j}{\sigma_j}$
-
+Avec $\bar{x}_j$ la moyenne pour la j eme variable et  $\sigma_j$ l'ecart-type de la variable quan- ´
+titative j
 
 
 
