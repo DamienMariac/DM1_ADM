@@ -1,9 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1728383044.36258 "c:/Users/damie/Desktop/MASTER/ADM/tp/tp1/tex/tp1Mariac.tex" "tp1Mariac.pdf" "tp1Mariac" 1728383044.85305 0
-  "C:/Users/damie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1726648230.97867 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
-  "C:/Users/damie/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1728381956.11725 11548 b8f38417bf371208b25c860c4bc556d2 ""
-  "C:/Users/damie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1726482269.21102 24225046 9af07babb4037f9200edad903b09e007 ""
-  "C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
+["pdflatex"] 1728402191.38415 "c:/Users/damie/Desktop/MASTER/ADM/tp/tp1/tex/tp1Mariac.tex" "tp1Mariac.pdf" "tp1Mariac" 1728402191.81025 0
+  "C:/Users/damie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1726648230 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
+  "C:/Users/damie/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1726482269 24225046 12de9b20689ef33bea56a0b54590523c ""
   "C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx10.tfm" 1136765053 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmbx12.tfm" 1136765053 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -38,10 +36,11 @@
   "C:/Users/damie/AppData/Local/Programs/MiKTeX/tex/latex/graphics/keyval.sty" 1665067579 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "C:/Users/damie/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665067579 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/damie/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1704400941 30006 57b07afb710ee2f649c65cfbafda39c1 ""
-  "c:/Users/damie/Desktop/MASTER/ADM/tp/tp1/tex/tp1Mariac.tex" 1728383043.23984 1584 6bbc93c1db8067b7ee3030eeb4c1a3a8 ""
-  "ssd_logo.png" 1728378241.33852 11882 cab918edf4da7a396fed5ada81d0b6cf ""
-  "tp1Mariac.aux" 1728383044.73195 439 9e0c44cc7d5caef201da2985b9076ef5 "pdflatex"
-  "tp1Mariac.toc" 1728383044.73395 243 7e9bb462d0c84b10551b824e56819216 "pdflatex"
+  "c:/Users/damie/Desktop/MASTER/ADM/tp/tp1/tex/tp1Mariac.tex" 1728402190 2507 cfc41a09f3f1bd8a99936a85a82115ee ""
+  "ssd_logo.png" 1728378241 11882 f77cab45982b1ebe15249c69858004c5 ""
+  "tp1Mariac.aux" 1728402191 605 62d4720014762ba72a3f469f95a61441 "pdflatex"
+  "tp1Mariac.tex" 1728402190 2507 cfc41a09f3f1bd8a99936a85a82115ee ""
+  "tp1Mariac.toc" 1728402191 243 6bc961b04d8f0e1c1b93e1792e676076 "pdflatex"
   (generated)
   "tp1Mariac.aux"
   "tp1Mariac.log"

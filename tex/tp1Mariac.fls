@@ -1,4 +1,4 @@
-PWD C:\Users\damie\Desktop\MASTER\ADM\tp\tp1\tex
+PWD c:\Users\damie\Desktop\MASTER\ADM\tp\tp1\tex
 INPUT C:\Users\damie\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
 INPUT c:\Users\damie\Desktop\MASTER\ADM\tp\tp1\tex\tp1Mariac.tex
 OUTPUT tp1Mariac.log
@@ -62,10 +62,7 @@ INPUT tp1Mariac.toc
 INPUT C:\Users\damie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
 OUTPUT tp1Mariac.toc
 INPUT C:\Users\damie\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\damie\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1000.tfm
 INPUT tp1Mariac.aux
-INPUT C:\Users\damie\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
-INPUT C:\Users\damie\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1000.pk
 INPUT C:\Users\damie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\damie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
 INPUT C:\Users\damie\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb

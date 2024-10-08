@@ -1,7 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
 
-\title{TP ADM}
+\title{TP1 ADM}
 \author{MARIAC Damien, Matteo Scaia}
 \date{\today} 
 
@@ -27,7 +27,29 @@ Et une variable qualitative "code".
 \section{Partie1}
 \subsection{inertie et barycentre}
 
-Nous cherchons à calculer la densité de peuplement de chaque espece par unité de surface.
+Nous cherchons à calculer la densité de peuplement de chaque espece par unité de surface. Nous calculons alors pour chaque parcelle:
+\[
+(d_j^i)_{1 \leq j \leq 1000}^{1 \leq i \leq 27} = \frac{x_j^i}{s_j}
+\]
+
+\begin{table}[h]
+    \centering
+    \caption{Extrait de densité}
+    \label{tab:donnees_extrait}
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    \textbf{Code} & \textbf{Gen1} & \textbf{Gen5} & \textbf{Gen10}\\
+    \hline
+    1 & 0 & 0 & 2.200 \\
+    2 & 0.6 & 0.133 & 1.333  \\
+    3 & 0.514 & 0.057 & 3.6 \\
+    4 & 0 & 0.439 & 0.244 \\
+    5 & 0.095 & 0 & 0.476 \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+
 Nous utiliserons des densités plutôt que des comptages car cela permet de normaliser les données par rapport à la taille de la parcelle,
 ce qui rend les comparaisons entre les parcelles équitables.
 \\
@@ -37,12 +59,23 @@ Nous allons alors utiliser :
 (x_j^i)_{1 \leq i \leq 27} = \frac{x_j^i - \bar{x}_j}{\sigma_j}
 \]
 
-Avec $\bar{x}_j$ la moyenne pour la j eme variable et  $\sigma_j$ l'ecart-type de la variable quan- ´
-titative j
+Avec $\bar{x}_j$ la moyenne pour la j eme variable et  $\sigma_j$ l'ecart-type de la variable quantitative j.
+\\
+\\
+Par consequents on a:
+\\
+Barycentre à l'origine : Après centrage, la moyenne de chaque variable (densité centrée-réduite) doit être 0.
+\\
+Inertie totale égale à 27 : L'inertie, qui mesure la dispersion du nuage de points, est égale à la somme des variances des variables, 
+qui doit être égale au nombre de variables après la réduction.
+
+
+
+
+
+
 
 
 
 \section{Conclusion}
-
-
 \end{document}
