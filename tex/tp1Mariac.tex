@@ -24,7 +24,7 @@ Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arbo
 Nous disposons dans notre jeu de donnée 30 variables quantitatives dont : 27 variables de comptage des espèces, la surface de la parcelle, 2 variables une forestier et une géologique.
 Et une variable qualitative "code".
 
-\section{Partie1}
+\section{Partie 1}
 \subsection{inertie et barycentre}
 
 Nous cherchons à calculer la densité de peuplement de chaque espece par unité de surface. Nous calculons alors pour chaque parcelle:
@@ -62,20 +62,81 @@ Nous allons alors utiliser :
 Avec $\bar{x}_j$ la moyenne pour la j eme variable et  $\sigma_j$ l'ecart-type de la variable quantitative j.
 \\
 \\
-Par consequents on a:
+\textbf{Par consequents on a:}
 \\
-Barycentre à l'origine : Après centrage, la moyenne de chaque variable (densité centrée-réduite) doit être 0.
 \\
-Inertie totale égale à 27 : L'inertie, qui mesure la dispersion du nuage de points, est égale à la somme des variances des variables, 
-qui doit être égale au nombre de variables après la réduction.
+\underline{Barycentre à l'origine :} (preuve théorique)
+\\
+
+Supposons que nous avons un ensemble de données $X$ composé de $n$ observations et $p$ variables. Après le centrage et la réduction, la matrice transformée $X'$ est définie par :
+
+\[
+\tilde{x}_{ij} = \frac{x_{ij} - \overline{x}_j}{s_j}
+\]
+
+où $\overline{x}_j$ est la moyenne et $s_j$ l'écart-type de la $j$-ème variable.
 
 
+Le barycentre de $X$ est donné par la moyenne de chaque colonne de $X$. Calculons cette moyenne pour n'importe quelle j:
+
+\[
+\overline{x}_j = \frac{1}{n} \sum_{i=1}^n \tilde{x}_{ij} = \frac{1}{n} \sum_{i=1}^n \frac{x_{ij} - \overline{x}_j}{s_j} = \frac{1}{s_j} \left(\frac{1}{n} \sum_{i=1}^n x_{ij}\right) - \frac{\overline{x}_j}{s_j} = 0
+\]
+
+Ainsi, le barycentre de chaque variable dans $X'$ est zéro.
+\\
+\\
+
+\underline{Inertie totale égale à 27 :} (preuve théorique)
+\\
+\\
+Considérons la meme matrice de données $X$. Après centrage et réduction, chaque élément de la matrice transformée $X'$ est défini par:
+\[
+x'_{ij} = \frac{x_{ij} - \overline{x}_j}{s_j}
+\]
+
+En reprenant les mêmes notations que avant.
 
 
+L'inertie de l'ensemble des points $X'$ par rapport à leur barycentre $\mathbf{y}_M$ est définie par:
+\[
+I_{Y, W} = \sum_{i=1}^n w_i \|\mathbf{x}_i - \mathbf{y}\|^2
+\]
+
+Pour les données centrées-réduites, chaque $\mathbf{x}_i'$ est déjà centré, donc le barycentre $\mathbf{y} = \mathbf{0}$. Par conséquent, la formule de l'inertie se simplifie à:
+\[
+I_{Y, W} = \sum_{i=1}^n w_i \|\mathbf{x}_i'\|^2
+\]
+
+Si tous les poids $w_i$ sont égaux (par exemple, $w_i = \frac{1}{n}$ ce qui est notre cas), alors l'inertie devient:
+\[
+I_{Y, W} = \frac{1}{n} \sum_{i=1}^n \|\mathbf{x}_i'\|^2
+\]
+
+Comme chaque $\mathbf{x}_i'$ est une observation centrée-réduite et la variance de chaque variable est 1, nous avons (pour i fixé):
+\[
+\|\mathbf{x}_i'\|^2 = \sum_{j=1}^p (x'_{ij})^2 = p
+\]
+
+Ainsi, l'inertie totale est:
+\[
+I_{Y, W} = \frac{1}{n} \sum_{i=1}^n p = p 
+\]
+ce qui montre que l'inertie totale du nuage des données centrées-réduites est égale au nombre de variables $p$ (qui dans notre cas vaut 27).
+
+\subsection{Autour des types forestiers}
+
+Pour calculer le poid de chaque type forestiers, nous avons divisé le nombre d'occurrences de chaque type forestier par 1000 (qui correspond au nombre de parcelle). Ensuite nous avons stocké
+dans une matrice le barycentre relatif à chaque typer forestier. On obtient alors le tableau de valeur :
+
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=1\textwidth]{barycentre_forestier.png}
+    \title{figure 2: matrice des barycentres pour chaque type forestier} 
+\end{figure}
 
 
-
-
-
+\newpage
 \section{Conclusion}
+
 \end{document}

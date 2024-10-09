@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  8 OCT 2024 17:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  9 OCT 2024 19:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -104,28 +104,64 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `tp1Mariac.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 62--71
+Underfull \hbox (badness 10000) in paragraph at lines 62--70
 
  []
 
-[3] [4] (tp1Mariac.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--70
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--94
+
+ []
+
+
+Overfull \hbox (1.23239pt too wide) in paragraph at lines 106--107
+[]\OT1/cmr/m/n/10 Pour les donn^^Sees centr^^Sees-r^^Seduites, chaque $\OT1/cmr/bx/n/10 x[]$ \OT1/cmr/m/n/10 est d^^Sej^^Ra centr^^Se, donc le barycen-
+ []
+
+[4]
+<barycentre_forestier.png, id=28, 326.4195pt x 136.1085pt>
+File: barycentre_forestier.png Graphic file (type png)
+<use barycentre_forestier.png>
+Package pdftex.def Info: barycentre_forestier.png  used on input line 134.
+(pdftex.def)             Requested size: 345.0pt x 143.86101pt.
+ [5 <./barycentre_forestier.png>] [6] (tp1Mariac.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1323 strings out of 474486
- 22267 string characters out of 5743755
- 1934542 words of memory out of 5000000
- 23641 multiletter control sequences out of 15000+600000
- 562324 words of font info for 50 fonts, out of 8000000 for 9000
+ 1335 strings out of 474486
+ 22529 string characters out of 5743755
+ 1935542 words of memory out of 5000000
+ 23651 multiletter control sequences out of 15000+600000
+ 562943 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,256b,242s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on tp1Mariac.pdf (4 pages, 126785 bytes).
+ 57i,8n,65p,274b,242s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tp1Mariac.pdf (6 pages, 159965 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
