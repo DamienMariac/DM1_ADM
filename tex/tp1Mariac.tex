@@ -1,5 +1,7 @@
 \documentclass{article}
 \usepackage{graphicx}
+\usepackage{amsmath}
+
 
 \title{TP1 ADM}
 \author{MARIAC Damien, Matteo Scaia}
@@ -126,14 +128,56 @@ ce qui montre que l'inertie totale du nuage des données centrées-réduites est
 
 \subsection{Autour des types forestiers}
 
-Pour calculer le poid de chaque type forestiers, nous avons divisé le nombre d'occurrences de chaque type forestier par 1000 (qui correspond au nombre de parcelle). Ensuite nous avons stocké
-dans une matrice le barycentre relatif à chaque typer forestier. On obtient alors le tableau de valeur :
+Dans cette section, nous calculons les barycentres des sept types forestiers présents dans les données, ainsi que l'inertie inter-types et le coefficient $R^2$ associé à la partition des parcelles selon ces types. Ce calcul nous permet d'évaluer la proportion de la variabilité totale des densités de peuplement expliquée par cette partition.
+
+\subsubsection{Calcul des poids des types forestiers}
+Le poids de chaque type forestier est calculé comme la proportion de parcelles appartenant à ce type par rapport à l'ensemble des 1000 parcelles. C'est à dire, le poids est donné par :
+
+\[
+p_i = \frac{\text{Nombre de parcelles du type } i}{1000}
+\]
+
+
+\subsubsection{Calcul des barycentres des types forestiers}
+Pour chaque type forestier, si on note $X$ la matrice des densités standardisées (matrice $1000 \times 27$), alors le barycentre vaut :
+
+\[
+\bar{X}_i = \frac{1}{n_i} \sum_{j \in \text{Type } i} X_j
+\]
+
+Cela nous donne comme tableau :
 
 \begin{figure}[h] 
     \centering
-    \includegraphics[width=1\textwidth]{barycentre_forestier.png}
-    \title{figure 2: matrice des barycentres pour chaque type forestier} 
+    \includegraphics[width=0.5\textwidth]{barycentre_forestier.png} 
 \end{figure}
+
+
+\subsubsection{Calcul des normes euclidiennes carrées}
+Une fois les barycentres calculés, nous évaluons la distance de chaque barycentre à l'origine de l'espace des 27 densités centré reduite. La distance est induite par la norme 2 et donc :
+Ce qui nous donne comme extrait de tableau : 
+
+\[
+\|\bar{X}_i\|^2 = \sum_{k=1}^{27} \bar{X}_{i,k}^2
+\]
+
+Ces normes euclidiennes carrées sont calculées pour chaque type forestier.
+
+\subsection{Inertie inter-types et coefficient $R^2$}
+L'inertie inter-types forestiers est calculée en pondérant les normes euclidiennes carrées par les poids des types forestiers. Elle mesure la variabilité des densités de peuplement expliquée par la partition en types forestiers et est définie par :
+
+\[
+\text{Inertie inter-types} = \sum_{i=1}^{7} p_i \|\bar{X}_i\|^2
+\]
+
+Le coefficient $R^2$, qui exprime la proportion de la variabilité totale des densités de peuplement expliquée par cette partition, est donné par le rapport entre l'inertie inter-types et l'inertie totale (27, correspondant au nombre de variables). Il est donc calculé par :
+
+\[
+R^2 = \frac{\text{Inertie inter-types}}{\text{Inertie totale}}
+\]
+
+Ce coefficient $R^2$ nous permet d'évaluer dans quelle mesure les types forestiers expliquent la variabilité des densités de peuplement dans les parcelles observées.
+
 
 
 \newpage
