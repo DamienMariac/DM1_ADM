@@ -233,7 +233,8 @@ matrice dont les colonnes sont les indicatrices de types forestiers, et $Z$ cell
 colonnes sont les indicatrices de sols (geology). \\
 On notera $W=\frac{1}{n}I_n$ la matrice des poids des individus et $M=\frac{1}{p}I_p$
 celle des poids des variables.
-\subsection{Rappel}
+\subsection{Rappel et calcul de projecteur}
+\subsubsection{Rappel}
 Montrons l'égalité suivante. \\
 \[
 \forall j \hspace{0.5cm} \Pi_Y x^j = \Pi_{Y^c} x^j
@@ -272,6 +273,31 @@ A partir de ces notations, nous avons l'expression suivante.
 \end{align*}
 Nous pouvons conclure que $\left\lVert \Pi_Y x^j \right\rVert^2 _W$ s'interprete statistiquement comme
 étant la mesure des variation des $x^j$ dans un certain type forestier.
+\\
+\\
+\subsubsection{Calcul de projecteur}
+Le but de cette question est de trouver l'expression
+de $\Pi_Y$ et de calculer pour tout $j \in [1,27]$, $\Pi_{x^{j}}$ et $tr(\Pi_{x^{j}}\Pi_Y)$. Nous ferons la démonstration
+puis nous programmerons le résultat. \\
+Tout d'abord, on admet l'expression suivante.
+\[
+\Pi_Y = Y(Y'WY)^{-1}Y'W
+\]
+Soit $j \in [1,27]$. Calculons les deux expressions donné précédemment.
+\[
+\Pi_{x^j}= x^{j}(x^{j\prime}Wx^{j})^{-1}x^{j\prime}W
+\]
+En utilisant les propriétés de la trace et l'expression de $\Pi_{x^j}$, il suit que 
+\begin{align*}
+    tr(\Pi_{x^{j}}\Pi_Y) &= tr(x^{j}(x^{j\prime}Wx^{j})^{-1}x^{j\prime}W\Pi_Y) \\
+    &=tr((x^{j\prime}Wx^{j})^{-1}x^{j\prime}W\Pi_Yx^{j})\\
+    &=(x^{j\prime}Wx^{j})^{-1}x^{j\prime}W\Pi_Yx^{j}\\
+    &= \frac{\left\langle x^{j\prime},\Pi_Yx^{j}\right\rangle_W }{\left\lVert x^j\right\rVert^2_W }\\
+    &= R^2(x^j\mid Y )
+\end{align*}
+Donc, nous pouvons conclure que $tr(\Pi_{x^{j}}\Pi_Y)$ 
+
+
 \newpage
 \section{Conclusion}
 

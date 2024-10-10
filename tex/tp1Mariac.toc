@@ -8,5 +8,7 @@
 \contentsline {subsection}{\numberline {2.3}Inertie inter-types et coefficient $R^2$}{6}{}%
 \contentsline {section}{\numberline {3}Partie 2}{7}{}%
 \contentsline {subsection}{\numberline {3.1}Enoncer}{7}{}%
-\contentsline {subsection}{\numberline {3.2}Rappel}{7}{}%
+\contentsline {subsection}{\numberline {3.2}Rappel et calcul de projecteur}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Rappel}{7}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Calcul de projecteur}{8}{}%
 \contentsline {section}{\numberline {4}Conclusion}{9}{}%
