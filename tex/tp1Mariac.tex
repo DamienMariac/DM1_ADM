@@ -178,8 +178,53 @@ R^2 = \frac{\text{Inertie inter-types}}{\text{Inertie totale}}
 
 Ce coefficient $R^2$ nous permet d'évaluer dans quelle mesure les types forestiers expliquent la variabilité des densités de peuplement dans les parcelles observées.
 
-
-
+\newpage
+\section{Partie 2}
+\subsection{Enoncer}
+On notera $X$ la matrice dont les colonnes sont les 27 densités centrées-réduites, $Y$ la
+matrice dont les colonnes sont les indicatrices de types forestiers, et $Z$ celle dont les
+colonnes sont les indicatrices de sols (geology). \\
+On notera $W=\frac{1}{n}I_n$ la matrice des poids des individus et $M=\frac{1}{p}I_p$
+celle des poids des variables.
+\subsection{Rappel}
+Montrons l'égalité suivante. \\
+\[
+\forall j \hspace{0.5cm} \Pi_Y x^j = \Pi_{Y^c} x^j
+\]
+Tout d'abord, il est important de rappeler que les $x^j$ sont des variables qui sont
+centrées réduites. De plus, nous rappelons que 
+\[
+Y^c = \Pi_{1^\perp} Y 
+\]
+\[
+\Pi_Y = \Pi_{Y^c} + \Pi_1
+\]
+A partir de ces deux résultats, nous pouvons conclure que. \\
+\begin{align*}
+    \Pi_Y x^j & = \Pi_{Y^c} x^j + \Pi_1 x^j \\
+    &= \Pi_{Y^c} x^j
+\end{align*}
+Nous venons de montrer que pour tout $j$, 
+\[
+\Pi_Y x^j = \Pi_{Y^c} x^j
+\]
+De plus, nous fixons $j$, et nous avons l'expression suivante.
+\[
+\left\lVert \Pi_Y x^j \right\rVert^2 _W = \left\langle \Pi_Y x^j,\Pi_Y x^j\right\rangle_W
+\]
+Or, il est important de préciser que
+\[
+\Pi_Y x^j=\sum_{q = 1}^{p}\Pi_{y^q} x^j=\sum_{q = 1}^{p}y^q( \overline{x^j}^q - {\overline{x^j}} )  
+\]
+Ici, $\overline{x^j}$ représente la moyenne globale des $x^j$, $\overline{x^j}^q$ représente la moyenne pondérée des $x^j$ pour le type forestier $q$.\\
+A partir de ces notations, nous avons l'expression suivante.
+\begin{align*}
+    \left\lVert \Pi_Y x^j \right\rVert^2 _W &= \left\langle \Pi_Y x^j,\Pi_Y x^j\right\rangle_W \\
+     &=  \sum_{q = 1}^{p}( \overline{x^j}^q - {\overline{x^j}} ) \sum_{ i= 1}^{p}( \overline{x^j}^i - {\overline{x^j}} )\left\langle y^q,y^i\right\rangle_W \\
+     &= \sum_{q = 1}^{p}w^q( \overline{x^j}^q - {\overline{x^j}} )^2
+\end{align*}
+Nous pouvons conclure que $\left\lVert \Pi_Y x^j \right\rVert^2 _W$ s'interprete statistiquement comme
+étant la mesure des variation des $x^j$ dans un certain type forestier.
 \newpage
 \section{Conclusion}
 

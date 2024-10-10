@@ -6,4 +6,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Calcul des barycentres des types forestiers}{5}{}%
 \contentsline {subsubsection}{\numberline {2.2.3}Calcul des normes euclidiennes carrées}{5}{}%
 \contentsline {subsection}{\numberline {2.3}Inertie inter-types et coefficient $R^2$}{6}{}%
-\contentsline {section}{\numberline {3}Conclusion}{7}{}%
+\contentsline {section}{\numberline {3}Partie 2}{7}{}%
+\contentsline {subsection}{\numberline {3.1}Enoncer}{7}{}%
+\contentsline {subsection}{\numberline {3.2}Rappel}{7}{}%
+\contentsline {section}{\numberline {4}Conclusion}{9}{}%
