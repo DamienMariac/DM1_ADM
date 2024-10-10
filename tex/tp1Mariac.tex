@@ -1,10 +1,12 @@
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{float}
+
 
 
 \title{TP1 ADM}
-\author{MARIAC Damien, Matteo Scaia}
+\author{MARIAC Damien, SCAIA Matteo}
 \date{\today} 
 
 \begin{document}
@@ -21,15 +23,37 @@
 \newpage
 
 \section{Introduction}
-On dispose d'un jeu de donnees présentant une étude de 27 espèces d'arbres dans 1000 parcelles d'une forêt.
-Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt du bassin du Congo.
-Nous disposons dans notre jeu de donnée 30 variables quantitatives dont : 27 variables de comptage des espèces, la surface de la parcelle, 2 variables une forestier et une géologique.
+On dispose d'un jeu de donnees présentant une étude de 27 espèces d'arbres dans 1000 parcelles de la forêt du Congo.
+Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt.
+Nous disposons dans notre jeu de donnée de 30 variables quantitatives dont : 27 variables de comptage des espèces, la surface de la parcelle, une forestier et une géologique.
 Et une variable qualitative "code".
+\\
+On arrondira les valeurs à $10^{-3}$
+
+\begin{table}[H]
+    \centering
+    \title{Extrait du jeu de données Datagenus}
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+    code & gen1 & gen2 & gen3 & forest & geology & surface \\ \hline
+    1299 & 0    & 0    & 0    & 2      & 3       & 5       \\ \hline
+    2644 & 9    & 0    & 3    & 7      & 6       & 15      \\ \hline
+    1838 & 9    & 0    & 0    & 5      & 6       & 17.5    \\ \hline
+    534  & 0    & 4    & 0    & 1      & 5       & 20.5    \\ \hline
+    3213 & 1    & 1    & 0    & 1      & 6       & 10.5    \\ \hline
+    1861 & 19   & 3    & 1    & 7      & 3       & 20      \\ \hline
+    3445 & 1    & 4    & 0    & 0      & 2       & 0       \\ \hline
+    \end{tabular}
+\end{table}
+
+
 
 \section{Partie 1}
 \subsection{inertie et barycentre}
 
-Nous cherchons à calculer la densité de peuplement de chaque espece par unité de surface. Nous calculons alors pour chaque parcelle:
+Nous enlevons une ligne problématique dans notre jeu de de donnée (ligne 1000 code TGC).
+De plus, on standarise (centré et réduire) les variables pour mieux comparer celles qui decrivent les différents densité. 
+
 \[
 (d_j^i)_{1 \leq j \leq 1000}^{1 \leq i \leq 27} = \frac{x_j^i}{s_j}
 \]
@@ -52,9 +76,7 @@ Nous cherchons à calculer la densité de peuplement de chaque espece par unité
     \end{table}
 
 
-Nous utiliserons des densités plutôt que des comptages car cela permet de normaliser les données par rapport à la taille de la parcelle,
-ce qui rend les comparaisons entre les parcelles équitables.
-\\
+
 Nous devons centrer et reduire les variables quantitatives dans le but de mieux comparer celles qui decrivent les différents densité.
 Nous allons alors utiliser :
 \[
@@ -97,7 +119,7 @@ Considérons la meme matrice de données $X$. Après centrage et réduction, cha
 x'_{ij} = \frac{x_{ij} - \overline{x}_j}{s_j}
 \]
 
-En reprenant les mêmes notations que avant.
+En reprenant les notations précédentes.
 
 
 L'inertie de l'ensemble des points $X'$ par rapport à leur barycentre $\mathbf{y}_M$ est définie par:
@@ -105,14 +127,12 @@ L'inertie de l'ensemble des points $X'$ par rapport à leur barycentre $\mathbf{
 I_{Y, W} = \sum_{i=1}^n w_i \|\mathbf{x}_i - \mathbf{y}\|^2
 \]
 
-Pour les données centrées-réduites, chaque $\mathbf{x}_i'$ est déjà centré, donc le barycentre $\mathbf{y} = \mathbf{0}$. Par conséquent, la formule de l'inertie se simplifie à:
+Pour les données centrées-réduites, chaque $\mathbf{x}_i'$
+est déjà centré, donc le barycentre $\mathbf{y} = \mathbf{0}$.
+De plus, tous les poids $w_i$ sont égaux (par exemple, $w_i = \frac{1}{n}$ ce qui est notre cas), alors l'inertie devient:
+Par conséquent, la formule de l'inertie se simplifie à:
 \[
-I_{Y, W} = \sum_{i=1}^n w_i \|\mathbf{x}_i'\|^2
-\]
-
-Si tous les poids $w_i$ sont égaux (par exemple, $w_i = \frac{1}{n}$ ce qui est notre cas), alors l'inertie devient:
-\[
-I_{Y, W} = \frac{1}{n} \sum_{i=1}^n \|\mathbf{x}_i'\|^2
+I_{Y, W} = \sum_{i=1}^n w_i \|\mathbf{x}_i'\|^2 = \frac{1}{n} \sum_{i=1}^n \|\mathbf{x}_i'\|^2 
 \]
 
 Comme chaque $\mathbf{x}_i'$ est une observation centrée-réduite et la variance de chaque variable est 1, nous avons (pour i fixé):
@@ -137,6 +157,16 @@ Le poids de chaque type forestier est calculé comme la proportion de parcelles 
 p_i = \frac{\text{Nombre de parcelles du type } i}{1000}
 \]
 
+\begin{table}[H]
+    \center
+    \title{Tabeau des poids forestier}
+    \begin{tabular}{|l|l|l|l|l|l|l|}
+    \hline
+    1     & 2     & 3     & 4     & 5     & 6     & 7     \\ \hline
+    0.278 & 0.105 & 0.022 & 0.018 & 0.169 & 0.095 & 0.313 \\ \hline
+    \end{tabular}
+    \end{table}
+
 
 \subsubsection{Calcul des barycentres des types forestiers}
 Pour chaque type forestier, si on note $X$ la matrice des densités standardisées (matrice $1000 \times 27$), alors le barycentre vaut :
@@ -147,36 +177,53 @@ Pour chaque type forestier, si on note $X$ la matrice des densités standardisé
 
 Cela nous donne comme tableau :
 
-\begin{figure}[h] 
+\begin{table}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{barycentre_forestier.png} 
-\end{figure}
-
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+         & [1,1]      & [1,2]      & [1,3]      & [1,4]      & [1,5]      & [1,6]           \\ \hline
+    [1,] & -0.2462294 & 0.23082910 & 0.03611401 & -0.08889818 & 0.06922725 & -0.01226803  \\ \hline
+    [2,] & -0.05236911 & -0.28419720 & -0.34740544 & -0.34547466 & -0.05978232 & 0.20027739  \\ \hline
+    [3,] & -0.49949475 & 0.34566947 & 0.52721272 & -0.34547466 & -0.12273153 & -0.24642324  \\ \hline
+    [4,] & -0.57909396 & 2.26944388 & -0.38335630 & -0.12426722 & 1.68203105 & 0.34941599   \\ \hline
+    [5,] & -0.2450022 & -0.15852951 & -0.16319450 & -0.24582392 & -0.22309466 & -0.01502983  \\ \hline
+    [6,] & -0.16040638 & -0.26337031 & -0.17338984 & 0.14638021 & 0.51625842 & -0.03510558  \\ \hline
+    [7,] & 0.36338233 & -0.09895475 & 0.21019653 & 0.40343818 & -0.16569062 & -0.04029016  \\ \hline
+    \end{tabular}
+    \title{Barycentres des sept types forestiers pour les sept premières densités de peuplement.}
+    \label{tab:barycentres}
+    \end{table}
 
 \subsubsection{Calcul des normes euclidiennes carrées}
 Une fois les barycentres calculés, nous évaluons la distance de chaque barycentre à l'origine de l'espace des 27 densités centré reduite. La distance est induite par la norme 2 et donc :
-Ce qui nous donne comme extrait de tableau : 
 
-\[
-\|\bar{X}_i\|^2 = \sum_{k=1}^{27} \bar{X}_{i,k}^2
-\]
+\begin{table}[H]
+    \begin{tabular}{|l|l|l|l|l|l|l|l|}
+    \hline
+    typer forestier       & 1         & 2         & 3         & 4      & 5     & 6     & 7     \\ \hline
+    distance (en norme 2) & 0.7710739 & 3.2249301 & 4.2750711 & 21.189 & 1.090 & 1.441 & 1.627 \\ \hline
+    \end{tabular}
+    \end{table}
 
-Ces normes euclidiennes carrées sont calculées pour chaque type forestier.
+
+
+
 
 \subsection{Inertie inter-types et coefficient $R^2$}
+
+
 L'inertie inter-types forestiers est calculée en pondérant les normes euclidiennes carrées par les poids des types forestiers. Elle mesure la variabilité des densités de peuplement expliquée par la partition en types forestiers et est définie par :
 
 \[
-\text{Inertie inter-types} = \sum_{i=1}^{7} p_i \|\bar{X}_i\|^2
+\text{Inertie inter-types} = \sum_{i=1}^{7} p_i \|\bar{X}_i\|^2 = 1.859
 \]
 
-Le coefficient $R^2$, qui exprime la proportion de la variabilité totale des densités de peuplement expliquée par cette partition, est donné par le rapport entre l'inertie inter-types et l'inertie totale (27, correspondant au nombre de variables). Il est donc calculé par :
-
+Le coefficient $R^2$ nous permet d'évaluer dans quelle mesure les types forestiers expliquent la variabilité des densités de peuplement dans les parcelles observées.
 \[
-R^2 = \frac{\text{Inertie inter-types}}{\text{Inertie totale}}
+R^2 = \frac{\text{Inertie inter-types}}{\text{Inertie totale}}=0.069
 \]
 
-Ce coefficient $R^2$ nous permet d'évaluer dans quelle mesure les types forestiers expliquent la variabilité des densités de peuplement dans les parcelles observées.
+
 
 \newpage
 \section{Partie 2}
