@@ -161,7 +161,7 @@ p_i = \frac{\text{Nombre de parcelles du type } i}{1000}
 Pour chaque type forestier $i$,  (avec $X$ la matrice des densités centrés réduites), le barycentre vaut :
 
 \[
-\bar{X}_i = \frac{1}{n_i} \sum_{j \in \text{Type } i} X_j
+\bar{X}_i = \frac{1}{n_i} \sum_{j \in \text{Type } i} X^j
 \]
 
 Avec $n_i$ le nombre de parcelles dans le type forestier i.
@@ -224,9 +224,9 @@ Montrons que le $R^2$ de la partition est la moyenne (arithmétique) des $R^2$ d
 
 \[
 R^2 = \frac{\text{Inertie externe}}{\text{Inertie totale}}
-= \frac{1}{27} \sum_{k=1}^{7} \lVert x_j^k \rVert^2
-= \frac{1}{27} \sum_{k=1}^{7} \sum_{j=1}^{27} (x_j^k)^2
-= \frac{1}{27} \sum_{j=1}^{27} \sum_{k=1}^{7} (x_j^k)^2
+= \frac{1}{27} \sum_{k=1}^{7} \lVert x_k^j \rVert^2
+= \frac{1}{27} \sum_{k=1}^{7} \sum_{j=1}^{27} (x_k^j)^2
+= \frac{1}{27} \sum_{j=1}^{27} \sum_{k=1}^{7} (x_k^j)^2
 = \frac{1}{27} \sum_{j=1}^{27} R_j^2
 \]
 
