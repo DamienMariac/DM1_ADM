@@ -1,0 +1,1 @@
+@generated_exts = qw(.aux .bbl .bcf .blg .fls .lof .log .lot .out .toc .run.xml);

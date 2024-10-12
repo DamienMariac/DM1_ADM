@@ -3,7 +3,22 @@
 \usepackage{amsmath}
 \usepackage{float}
 \usepackage{amsfonts}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
 
+
+\lstset{
+  language=R,
+  basicstyle=\ttfamily\small,
+  numbers=left,               % Numérotation des lignes
+  numberstyle=\tiny\color{gray}, % Style de la numérotation
+  keywordstyle=\color{blue},  % Couleur des mots-clés
+  commentstyle=\color{green}, % Couleur des commentaires
+  stringstyle=\color{red},    % Couleur des chaînes de caractères
+  breaklines=true,            % Coupe les lignes trop longues
+  frame=single,               % Encadre le code
+}
 
 
 \title{TP1 ADM}
@@ -25,7 +40,9 @@
 \end{figure}
 
 \newpage
+
 \tableofcontents
+
 \newpage
 
 \section{Introduction}
@@ -303,5 +320,8 @@ Donc, nous pouvons conclure que $tr(\Pi_{x^{j}}\Pi_Y)$
 
 \newpage
 \section{Conclusion}
+
+\newpage
+\lstinputlisting{C:/Users/damie/Desktop/MASTER/ADM/tp/tp1/tex/TP1.R}
 
 \end{document}

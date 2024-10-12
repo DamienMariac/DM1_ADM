@@ -1,0 +1,19 @@
+{
+    "latex-workshop.latex.tools": [
+      {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+          "-synctex=1",
+          "-interaction=nonstopmode",
+          "-file-line-error",
+          "%DOC%"
+        ]
+      }
+    ],
+    "files.exclude": {
+      "**/TP1.R": true
+    },
+    "r.linting.enabled": false
+  }
+  
