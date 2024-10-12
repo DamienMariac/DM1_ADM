@@ -18,6 +18,11 @@
     \includegraphics[width=0.5\textwidth]{ssd_logo.png} 
 \end{figure}
 
+\begin{figure}[h] 
+    \centering
+    \includegraphics[width=0.5\textwidth]{logo_um_2022_rouge_RVB.png} 
+\end{figure}
+
 \newpage
 \tableofcontents
 \newpage
@@ -33,7 +38,6 @@ On arrondira les valeurs à $10^{-3}$
 
 \begin{table}[H]
     \centering
-    \title{Extrait du jeu de données Datagenus}
     \begin{tabular}{|l|l|l|l|l|l|l|}
     \hline
     code & gen1 & gen2 & gen3 & forest & geology & surface \\ \hline
@@ -45,6 +49,7 @@ On arrondira les valeurs à $10^{-3}$
     1861 & 19   & 3    & 1    & 7      & 3       & 20      \\ \hline
     3445 & 1    & 4    & 0    & 0      & 2       & 0       \\ \hline
     \end{tabular}
+    \caption{Extrait du jeu de données Datagenus}
 \end{table}
 
 
@@ -149,12 +154,12 @@ p_i = \frac{\text{Nombre de parcelles du type } i}{1000}
 
 \begin{table}[H]
     \center
-    \title{Tabeau des poids forestier}
     \begin{tabular}{|l|l|l|l|l|l|l|}
     \hline
     1     & 2     & 3     & 4     & 5     & 6     & 7     \\ \hline
     0.278 & 0.105 & 0.022 & 0.018 & 0.169 & 0.095 & 0.313 \\ \hline
     \end{tabular}
+    \caption{Tabeau des poids forestier}
     \end{table}
 
 
@@ -167,7 +172,7 @@ Pour chaque type forestier, si on note $X$ la matrice des densités standardisé
 
 
 \subsubsection{Calcul des normes euclidiennes carrées}
-Une fois les barycentres calculés, nous évaluons la distance de chaque barycentre à l'origine de l'espace des 27 densités centré reduite. La distance est induite par la norme 2 et donc :
+Une fois les barycentres calculés, nous évaluons la distance de chaque barycentre à l'origine:
 
 \begin{table}[H]
     \begin{tabular}{|l|l|l|l|l|l|l|l|}
@@ -175,13 +180,14 @@ Une fois les barycentres calculés, nous évaluons la distance de chaque barycen
     typer forestier       & 1         & 2         & 3         & 4      & 5     & 6     & 7     \\ \hline
     distance (en norme 2) & 0.7710739 & 3.2249301 & 4.2750711 & 21.189 & 1.090 & 1.441 & 1.627 \\ \hline
     \end{tabular}
+    \caption{normes carrée}
     \end{table}
 
 
 
 
 
-\subsection{Inertie inter-types et coefficient $R^2$}
+\subsubsection{Inertie inter-types et coefficient $R^2$}
 
 
 L'inertie inter-types forestiers est calculée en pondérant les normes euclidiennes carrées par les poids des types forestiers. Elle mesure la variabilité des densités de peuplement expliquée par la partition en types forestiers et est définie par :
@@ -197,6 +203,37 @@ R^2 = \frac{\text{Inertie inter-types}}{\text{Inertie totale}}=0.069
 
 Cela correspond à une disparité d'environ 7\%
 
+\subsection{Liaison variable-appellation}
+
+On s'interesse maintenant à l'interpretation des resultats trouvé. Nous calculons alors le $R^2$ de chaque variable densité avec $R^2 = \frac{variance inter types forestiers}{variance totale}$
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Especes & gen1  & gen6  & gen17 & gen25 \\ \hline
+    R²      & 0.072 & 0.008 & 0.096 & 0.184 \\ \hline
+    \end{tabular}
+    \centering
+    \caption{Extrait du R² des variables}
+    \end{table}
+
+
+Nous remarquons numériquement que la variable la plus lié au type est gen25, tandis que la moins lié est gen6.
+
+Montrons que le $R^2$ de la partition est la moyenne (arithmétique) des $R^2$ des densités:
+
+\[
+R^2 = \frac{\text{Inertie externe}}{\text{Inertie totale}}
+= \frac{1}{27} \sum_{k=1}^{7} \lVert x_j^k \rVert^2
+= \frac{1}{27} \sum_{k=1}^{7} \sum_{j=1}^{27} (x_j^k)^2
+= \frac{1}{27} \sum_{j=1}^{27} \sum_{k=1}^{7} (x_j^k)^2
+= \frac{1}{27} \sum_{j=1}^{27} R_j^2
+\]
+
+On retrouve bien numériquement la meme valeur :
+\\
+\includegraphics[width=1.5\textwidth]{preuve_info_p1.png}
 
 \newpage
 \section{Partie 2}

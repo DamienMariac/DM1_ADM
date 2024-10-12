@@ -50,7 +50,7 @@ poids_forestiers <- table(data2$forest) / nrow(data2)
 inertie_inter_types <- sum(normes_euclidiennes * poids_forestiers)
 
 # Calcul du R^2
-R2 <- inertie_inter_types / inertie_totale
+R2 <- inertie_inter_types / 27
 
 #### Question 3 ####
 
@@ -71,3 +71,11 @@ R2_par_espece_df <- data.frame(Espece = espece, R2 = R2_par_espece)
 # Trouver les espèces les plus et les moins liées aux types forestiers
 especes_plus_liees <- R2_par_espece_df[which.max(R2_par_espece_df$R2), ]
 especes_moins_liees <- R2_par_espece_df[which.min(R2_par_espece_df$R2), ]
+
+
+# Derniere question
+
+mean_R2 <- mean(R2_par_espece)
+print(mean_R2)
+print(R2)
+

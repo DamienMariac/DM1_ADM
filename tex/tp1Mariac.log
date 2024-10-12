@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  12 OCT 2024 14:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  12 OCT 2024 15:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -157,64 +157,84 @@ File: ssd_logo.png Graphic file (type png)
 <use ssd_logo.png>
 Package pdftex.def Info: ssd_logo.png  used on input line 18.
 (pdftex.def)             Requested size: 172.5pt x 59.22734pt.
+<logo_um_2022_rouge_RVB.png, id=3, 194.6472pt x 71.0655pt>
+File: logo_um_2022_rouge_RVB.png Graphic file (type png)
+<use logo_um_2022_rouge_RVB.png>
+Package pdftex.def Info: logo_um_2022_rouge_RVB.png  used on input line 23.
+(pdftex.def)             Requested size: 172.5pt x 62.98132pt.
  [1
 
-{C:/Users/damie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./ssd_logo.png>] (tp1Mariac.toc)
+{C:/Users/damie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./ssd_logo.png> <./logo_um_2022_rouge_RVB.png>] (tp1Mariac.toc)
 \tf@toc=\write3
 \openout3 = `tp1Mariac.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 78--87
+Underfull \hbox (badness 10000) in paragraph at lines 83--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--87
+Underfull \hbox (badness 10000) in paragraph at lines 83--92
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 107--111
+Underfull \hbox (badness 10000) in paragraph at lines 112--116
 
  []
 
 [4]
-Overfull \hbox (71.0843pt too wide) in paragraph at lines 173--178
+Overfull \hbox (71.0843pt too wide) in paragraph at lines 178--183
 [][] 
  []
 
 [5]
-Overfull \hbox (0.32338pt too wide) in paragraph at lines 193--194
+Overfull \hbox (0.32338pt too wide) in paragraph at lines 199--200
 []\OT1/cmr/m/n/10 Le co-ef-fi-cient $\OML/cmm/m/it/10 R[]$ \OT1/cmr/m/n/10 nous per-met d'^^Sevaluer dans quelle mesure les types forestiers
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+Overfull \hbox (31.47906pt too wide) detected at line 232
+\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = [] = [] []\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 = [] [] [](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] = [] [] [](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] = [] [] \OML/cmm/m/it/10 R[]
+ []
+
+<preuve_info_p1.png, id=33, 684.75826pt x 101.178pt>
+File: preuve_info_p1.png Graphic file (type png)
+<use preuve_info_p1.png>
+Package pdftex.def Info: preuve_info_p1.png  used on input line 236.
+(pdftex.def)             Requested size: 517.5pt x 76.46378pt.
+
+Overfull \hbox (172.5pt too wide) in paragraph at lines 234--237
+[] 
+ []
+
+[6 <./preuve_info_p1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 246--251
+Underfull \hbox (badness 10000) in paragraph at lines 283--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--251
+Underfull \hbox (badness 10000) in paragraph at lines 283--288
 
  []
 
@@ -225,17 +245,17 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2110 strings out of 474486
- 32642 string characters out of 5743755
+ 2124 strings out of 474486
+ 33063 string characters out of 5743755
  1939542 words of memory out of 5000000
- 24402 multiletter control sequences out of 15000+600000
- 564692 words of font info for 59 fonts, out of 8000000 for 9000
+ 24417 multiletter control sequences out of 15000+600000
+ 564406 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,65p,430b,238s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on tp1Mariac.pdf (9 pages, 201069 bytes).
+ <C:\Users\damie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on tp1Mariac.pdf (9 pages, 235055 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
+ 109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
