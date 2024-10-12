@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  12 OCT 2024 17:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  12 OCT 2024 18:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -184,72 +184,72 @@ Package pdftex.def Info: logo_um_2022_rouge_RVB.png  used on input line 24.
 \openout3 = `tp1Mariac.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 83--93
+Underfull \hbox (badness 10000) in paragraph at lines 82--91
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 83--93
+Underfull \hbox (badness 10000) in paragraph at lines 82--91
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--114
+Underfull \hbox (badness 10000) in paragraph at lines 108--112
 
  []
 
 [4]
-Overfull \hbox (71.0843pt too wide) in paragraph at lines 176--181
+Overfull \hbox (71.0843pt too wide) in paragraph at lines 174--179
 [][] 
  []
 
 [5]
-Overfull \hbox (0.32338pt too wide) in paragraph at lines 197--198
+Overfull \hbox (0.32338pt too wide) in paragraph at lines 195--196
 []\OT1/cmr/m/n/10 Le co-ef-fi-cient $\OML/cmm/m/it/10 R[]$ \OT1/cmr/m/n/10 nous per-met d'^^Sevaluer dans quelle mesure les types forestiers
  []
 
 
-Overfull \hbox (31.47906pt too wide) detected at line 231
+Overfull \hbox (31.47906pt too wide) detected at line 229
 \OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = [] = [] []\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 = [] [] [](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] = [] [] [](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] = [] [] \OML/cmm/m/it/10 R[]
  []
 
 <preuve_info_p1.png, id=34, 684.75826pt x 101.178pt>
 File: preuve_info_p1.png Graphic file (type png)
 <use preuve_info_p1.png>
-Package pdftex.def Info: preuve_info_p1.png  used on input line 235.
+Package pdftex.def Info: preuve_info_p1.png  used on input line 233.
 (pdftex.def)             Requested size: 517.5pt x 76.46378pt.
 
-Overfull \hbox (172.5pt too wide) in paragraph at lines 233--236
+Overfull \hbox (172.5pt too wide) in paragraph at lines 231--234
 [] 
  []
 
 [6 <./preuve_info_p1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 282--287
+Underfull \hbox (badness 10000) in paragraph at lines 280--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--287
+Underfull \hbox (badness 10000) in paragraph at lines 280--285
 
  []
 
@@ -262,13 +262,13 @@ L3 programming layer <2024-01-04>
 Here is how much of TeX's memory you used:
  2239 strings out of 474486
  34934 string characters out of 5743755
- 1939542 words of memory out of 5000000
+ 1938542 words of memory out of 5000000
  24516 multiletter control sequences out of 15000+600000
  566886 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,10n,65p,399b,238s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\damie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tp1Mariac.pdf (9 pages, 240247 bytes).
+Output written on tp1Mariac.pdf (9 pages, 240943 bytes).
 PDF statistics:
  114 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
