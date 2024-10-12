@@ -2,6 +2,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{float}
+\usepackage{amsfonts}
 
 
 
@@ -31,8 +32,8 @@
 On dispose d'un jeu de donnees présentant une étude de 27 espèces d'arbres dans 1000 parcelles de la forêt du Congo.
 Nous avons enlevé une ligne problématique dans notre jeu de de donnée (ligne 1000 code TGC).
 Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt.
-Nous disposons dans notre jeu de donnée de 30 variables quantitatives dont : 27 variables de comptage des espèces, la surface de la parcelle, une forestier et une géologique.
-Et une variable qualitative "code".
+Nous disposons dans notre jeu de donnée de 30 variables quantitatives dont : 27 variables de comptage des espèces, une sur la surface de la parcelle, une forestier et une géologique.
+Et d'une variable qualitative "code".
 \\
 On arrondira les valeurs à $10^{-3}$
 
@@ -68,19 +69,19 @@ où \(n_i^j\) est le nombre d'arbres de l'espèce \(j\) présents sur la parcell
 \vspace{2\baselineskip}
 
 
-De plus, on standarise (centré et réduire) les variables, cela nous permets de comparer celles qui decrivent les différents densité. 
 
-Nous devons centrer et reduire les variables quantitatives dans le but de mieux comparer celles qui decrivent les différents densité.
+Nous devons de plus centrer et reduire les variables quantitatives dans le but de mieux comparer celles qui decrivent les différents densité.
 Nous allons alors utiliser :
 \[
 (x_j^i)_{1 \leq i \leq 27} = \frac{x_j^i - \bar{x}_j}{\sigma_j}
 \]
 
-Avec $\bar{x}_j$ la moyenne pour la j eme variable et  $\sigma_j$ l'ecart-type de la variable quantitative j.
+Avec $\bar{x}_j$ la moyenne pour la j-eme variable et  $\sigma_j$ l'ecart-type de la j-eme variable.
 
 \vspace{2\baselineskip}
 
-Dans la suite, nous ne considererons plus que les variables centrées-réduites.
+Dans la suite, nous ne considererons plus que les variables centrées-réduites
+(Une matrice $X \in \mathcal{M}_{1000,27}(\mathbb{R})$).
 De plus, on supposera que le poid de nos parcelles sont equipondérée.
 \vspace{2\baselineskip}
 \\
@@ -96,9 +97,6 @@ Supposons que nous avons un ensemble de données $X$ composé de $n$ observation
 \tilde{x}_{ij} = \frac{x_{ij} - \overline{x}_j}{s_j}
 \]
 
-où $\overline{x}_j$ est la moyenne et $s_j$ l'écart-type de la $j$-ème variable.
-
-
 Le barycentre de $X$ est donné par la moyenne de chaque colonne de $X$. Calculons cette moyenne pour n'importe quelle j:
 
 \[
@@ -112,11 +110,7 @@ Ainsi, le barycentre de chaque variable dans $X'$ est zéro.
 \underline{Inertie totale égale à 27 :} (preuve théorique)
 \\
 \\
-Considérons la meme matrice de données $X$. Après centrage et réduction, chaque élément de la matrice transformée $\tilde{X}$ est défini par:
-\[
-\tilde{x}_{ij} = \frac{x_{ij} - \overline{x}_j}{s_j}
-\]
-
+Considérons la meme matrice de données $\tilde{X}$.
 
 
 L'inertie de l'ensemble des points $\tilde{X}$ par rapport à leur barycentre $\mathbf{y}$ est définie par:
@@ -143,7 +137,7 @@ Dans notre cas vaut 27.
 
 \subsection{Autour des types forestiers}
 
-Dans cette section, nous calculons les barycentres des sept types forestiers présents dans les données, ainsi que l'inertie inter-types et le coefficient $R^2$ associé à la partition des parcelles selon ces types. Ce calcul nous permet d'évaluer la proportion de la variabilité totale des densités de peuplement expliquée par cette partition.
+Dans cette section, nous calculons les barycentres des sept types forestiers présents dans les données, ainsi que l'inertie inter-types et le coefficient $R^2$ associé à la partition des parcelles selon ces types. Ce calcul nous permet d'évaluer la proportion de la variabilité totale des densités de peuplement.
 
 \subsubsection{Calcul des poids des types forestiers}
 Le poids de chaque type forestier est calculé comme la proportion de parcelles appartenant à ce type par rapport à l'ensemble des 1000 parcelles. C'est à dire, le poids est donné par :
@@ -164,11 +158,15 @@ p_i = \frac{\text{Nombre de parcelles du type } i}{1000}
 
 
 \subsubsection{Calcul des barycentres des types forestiers}
-Pour chaque type forestier, si on note $X$ la matrice des densités standardisées (matrice $1000 \times 27$), alors le barycentre vaut :
+Pour chaque type forestier $i$,  (avec $X$ la matrice des densités centrés réduites), le barycentre vaut :
 
 \[
 \bar{X}_i = \frac{1}{n_i} \sum_{j \in \text{Type } i} X_j
 \]
+
+Avec $n_i$ le nombre de parcelles dans le type forestier i.
+\\
+Nous obtenons alors une matrice $B \in \mathcal{M}_{7,27}(\mathbb{R})$
 
 
 \subsubsection{Calcul des normes euclidiennes carrées}
@@ -205,7 +203,8 @@ Cela correspond à une disparité d'environ 7\%
 
 \subsection{Liaison variable-appellation}
 
-On s'interesse maintenant à l'interpretation des resultats trouvé. Nous calculons alors le $R^2$ de chaque variable densité avec $R^2 = \frac{variance inter types forestiers}{variance totale}$
+On s'interesse maintenant à l'interpretation des resultats trouvé. Nous calculons alors le $R^2$ de chaque variable densité avec
+ $R^2 = \frac{variance_{inter} - types forestiers}{variance totale}$.
 
 \begin{table}[H]
     \centering
