@@ -1,4 +1,3 @@
-# Partie 1 : 
 rm(list = ls())
 
 data <- read.csv("C:/Users/damie/Desktop/MASTER/ADM/tp/tp1/Datagenus.csv", sep=";")
@@ -6,8 +5,7 @@ data2 <- data[1 :1000,] #On enlève la ligne qui pose problème
 
 ##### Question 1 #### 
 
-# Sélectionner les colonnes des espèces
-espece <- paste0("gen", 1:27)
+espece <- paste0("gen", 1:27) 
 
 # Calculer la densité de peuplement pour chaque espèce
 densité <- data2[espece] / data2$surface
