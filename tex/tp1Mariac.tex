@@ -46,13 +46,11 @@
 \newpage
 
 \section{Introduction}
-On dispose d'un jeu de donnees présentant une étude de 27 espèces d'arbres dans 1000 parcelles de la forêt du Congo.
-Nous avons enlevé une ligne problématique dans notre jeu de de donnée (ligne 1000 code TGC).
-Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt.
-Nous disposons dans notre jeu de donnée de 30 variables quantitatives dont : 27 variables de comptage des espèces, une sur la surface de la parcelle, une forestier et une géologique.
-Et d'une variable qualitative "code".
-\\
-On arrondira les valeurs à $10^{-3}$.
+On dispose d'un jeu de données présentant une étude de 27 espèces d'arbres dans 1000 parcelles de la forêt du Congo.
+ Nous avons enlevé une ligne problématique dans notre jeu de données (ligne 1000 code TGC). Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt.
+ Nous disposons dans notre jeu de données de 30 variables quantitatives dont : 27 variables de comptage des espèces, une sur la surface de la parcelle, une forestière et une géologique. Et d'une variable qualitative "code".
+  On arrondira les valeurs à $10^{-3}$.
+
 
 \begin{table}[H]
     \centering
@@ -72,87 +70,69 @@ On arrondira les valeurs à $10^{-3}$.
 
 
 \section{Partie 1}
-\subsection{inertie et barycentre}
+\subsection{Inertie et barycentre}
 
-Afin d'avoir une une comparaison plus juste entre chaque parcelles, nous utiliserons la densité de peuplement de ces dernieres. C'est à dire 
-la densité de peuplement de chaque espèce d'arbre par unité de surface est donnée par:
-
+Afin d'avoir une comparaison plus juste entre chaque parcelle, nous utilisons la densité de peuplement de ces dernières. C'est-à-dire que la densité de peuplement de chaque espèce d'arbre par unité de surface est donnée par :
 \[
-\text{d}_i^j = \frac{n_i^j}{S_i}
+d^j_i = \frac{n^j_i}{S_i}
 \]
-où \(n_i^j\) est le nombre d'arbres de l'espèce \(j\) présents sur la parcelle \(i\), et \(S_i\) représente la surface de la parcelle \(i\).
+où $n^j_i$ est le nombre d'arbres de l'espèce $j$ présents sur la parcelle $i$, et $S_i$ représente la surface de la parcelle $i$.
 
-\vspace{2\baselineskip}
-
-
-
-Nous devons de plus centrer et reduire les variables quantitatives dans le but de mieux comparer celles qui decrivent les différents densité.
-Nous allons alors utiliser :
+Nous devons de plus centrer et réduire les variables quantitatives dans le but de mieux comparer celles qui décrivent les différentes densités. Nous allons alors utiliser :
 \[
-(x_i^j)_{1 \leq j \leq 27} = \frac{x_i^j - \bar{x}^j}{\sigma_j}
+(x^j_i)_{1 \leq j \leq 27} = \frac{x^j_i - \bar{x}_j}{\sigma_j}
 \]
+avec $\bar{x}_j$ la moyenne pour la $j$-ème variable et $\sigma_j$ l'écart-type de la $j$-ème variable.
 
-Avec $\bar{x}_j$ la moyenne pour la j-eme variable et  $\sigma_j$ l'ecart-type de la j-eme variable.
+Dans la suite, nous ne considérerons plus que les variables centrées-réduites.
 
-\vspace{2\baselineskip}
-
-Dans la suite, nous ne considererons plus que les variables centrées-réduites.
-De plus, on supposera que le poid de nos parcelles sont equipondérée.
+De plus, on supposera que le poids de nos parcelles est équipondéré.
 \vspace{2\baselineskip}
 \\
-\textbf{Par consequents on a:}
+\textbf{Par conséquent, on a :}
 \\
 \\
-\underline{Barycentre à l'origine :} (preuve théorique)
+\indent\underline{Barycentre à l'origine :} (preuve théorique)
 \\
-
-Supposons que nous avons un ensemble de données $X$ composé de $n$ observations et $p$ variables (dans notre cas 1000 et 27). Après le centrage et la réduction, la matrice transformée $X'$ est définie par :
-
+\\
+Supposons que nous avons un ensemble de données \(X\) composé de \(n\) observations et \(p\) variables (dans notre cas 1000 et 27). Après le centrage et la réduction, la matrice transformée \(X'\) est définie par :
 \[
-\tilde{x}_{ij} = \frac{x_{ij} - \overline{x}^j}{s_j}
+x'_{ij} = \frac{x_{ij} - \bar{x}_j}{s_j}
 \]
-
-Le barycentre de $X$ est donné par la moyenne de chaque colonne de $X$. Calculons cette moyenne pour n'importe quelle j:
-
+Le barycentre de \(X\) est donné par la moyenne de chaque colonne de \(X\). Calculons cette moyenne pour n'importe quelle \(j\) :
 \[
-\overline{x}^j = \frac{1}{n} \sum_{i=1}^n \tilde{x}_{i}^j = \frac{1}{n} \sum_{i=1}^n \frac{x_{i}^j - \overline{x}^j}{s_j} = \frac{1}{s_j} \left(\frac{1}{n} \sum_{i=1}^n x_{i}^j\right) - \frac{\overline{x}^j}{s_j} = 0
+\bar{x}_j = \frac{1}{n} \sum_{i=1}^n \left( \frac{x_{ij} - \bar{x}_j}{s_j} \right) = \frac{1}{s_j} \left( \frac{1}{n} \sum_{i=1}^n x_{ij} - \bar{x}_j \right) = 0
 \]
-
-Ainsi, le barycentre de chaque variable dans $X'$ est zéro.
-\\
+Ainsi, le barycentre de chaque variable dans \(X'\) est zéro.
 \\
 
-\underline{Inertie totale égale à 27 :} (preuve théorique)
+
+\underline{Inertie totale égale à 27 : } (preuve théorique)
 \\
 \\
-Considérons la meme matrice de données $\tilde{X}$.
-
-
-L'inertie de l'ensemble des points $\tilde{X}$ par rapport à leur barycentre $\mathbf{y}$ est définie par:
+Considérons la même matrice de données \(X'\). L'inertie de l'ensemble des points \(X\) par rapport à leur barycentre \(y\) est définie par :
 \[
-I_{Y, W} = \sum_{i=1}^n w_i \|\mathbf{\tilde{x}}_i - \mathbf{y}\|^2
+I_{y,w} = \sum_{i=1}^n w_i \|x_i - y\|^2
 \]
-
-Dans notre cas, le barycentre est nulle.
-De plus, tous les poids $w_i$ sont égaux (par exemple, $w_i = \frac{1}{n}$ ce qui est notre cas), alors l'inertie devient:
+Dans notre cas, le barycentre est nul. De plus, tous les poids \(w_i\) sont égaux (par exemple, \(w_i = \frac{1}{n}\) ce qui est notre cas), alors l'inertie devient :
 \[
-I_{Y, W} = \sum_{i=1}^n w_i \|\mathbf{\tilde{x}}_i\|^2 = \frac{1}{n} \sum_{i=1}^n \|\mathbf{\tilde{x}}_i\|^2 
+I_{y,w} = \sum_{i=1}^n w_i \|x_i\|^2 = \frac{1}{n} \sum_{i=1}^n \|x_i\|^2
 \]
-
-Comme chaque $\mathbf{\tilde{x}}_i$ est une observation centrée-réduite et la variance de chaque variable est 1, nous avons (pour i fixé):
+Comme chaque \(x_i\) est une observation centrée-réduite et la variance de chaque variable est 1, nous avons (pour \(i\) fixé) :
 \[
-\|\mathbf{\tilde{x}}_i\|^2 = \sum_{j=1}^p (\tilde{x}_{i}^j)^2 = p
+\|x_i\|^2 = \sum_{j=1}^p (x'_{ij})^2 = p
 \]
-
-Ainsi, l'inertie totale est:
+Ainsi, l'inertie totale est :
 \[
-I_{Y, W} = \frac{1}{n} \sum_{i=1}^n p = p 
+I_{y,w} = \frac{1}{n} \sum_{i=1}^n p = p
 \]
 Dans notre cas vaut 27.
 
 \subsection{Autour des types forestiers}
 
-Dans cette section, nous calculons les barycentres des sept types forestiers présents dans les données, ainsi que l'inertie inter-types et le coefficient $R^2$ associé à la partition des parcelles selon ces types. Ce calcul nous permet d'évaluer la proportion de la variabilité totale des densités de peuplement.
+Dans cette section, nous calculons les barycentres des sept types forestiers présents dans les données, ainsi que l'inertie inter-types et le coefficient $R^2$
+ associé à la partition des parcelles selon ces types. Ce calcul nous permet d'évaluer la proportion de la variabilité totale des densités de peuplement.
+
 
 \subsubsection{Calcul des poids des types forestiers}
 Le poids de chaque type forestier est calculé comme la proportion de parcelles appartenant à ce type par rapport à l'ensemble des 1000 parcelles. C'est à dire, le poids est donné par :
@@ -173,7 +153,7 @@ p_i = \frac{\text{Nombre de parcelles du type } i}{1000}
 
 
 \subsubsection{Calcul des barycentres des types forestiers}
-Pour chaque type forestier $i$,  (avec $X$ la matrice des densités centrés réduites), le barycentre vaut :
+Pour chaque type forestier $i$,  (avec $X$ la matrice des densités centrées réduites), le barycentre vaut :
 
 \[
 \bar{X}_i = \frac{1}{n_i} \sum_{j \in \text{Type } i} X^j
@@ -214,8 +194,8 @@ Cela correspond à une disparité d'environ 7\%
 
 \subsection{Liaisons}
 
-On s'interesse maintenant à l'interpretation des resultats trouvé. Nous calculons alors le $R^2$ de chaque variable densité avec
- $R^2 = \frac{variance_{inter -typesforestiers}}{variance totale}$.
+On s'intéresse maintenant à l'interprétation des résultats trouvés. Nous calculons alors le \( R^2 \) de chaque variable densité avec $R^2 = \frac{variance_{inter -typesforestiers}}{variance totale}$.
+(C'est à dire : \( R^2 = \frac{\text{Inertie externe}}{\text{Inertie totale}} \).)
 
 \begin{table}[H]
     \centering
@@ -229,9 +209,9 @@ On s'interesse maintenant à l'interpretation des resultats trouvé. Nous calcul
     \end{table}
 
 
-Nous remarquons numériquement que la variable la plus lié au type est gen25, tandis que la moins lié est gen6.
-
-Montrons que le $R^2$ de la partition est la moyenne (arithmétique) des $R^2$ des densités:
+    Nous remarquons numériquement que la variable la plus liée au type est gen25, tandis que la moins liée est gen6. 
+    \\
+    Montrons que le \( R^2 \) de la partition est la moyenne (arithmétique) des \( R^2 \) des densités:
 
 \[
 R^2 = \frac{\text{Inertie externe}}{\text{Inertie totale}}
