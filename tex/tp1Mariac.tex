@@ -6,6 +6,7 @@
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
+\usepackage{hyperref}
 
 
 \lstset{
@@ -177,6 +178,7 @@ Une fois les barycentres calculés, nous évaluons la distance de chaque barycen
     \end{table}
 
 \subsubsection{Inertie inter-types et coefficient $R^2$}
+\label{subsec : Inertie inter-types et coefficient}
 
 
 L'inertie inter-types forestiers est calculée en pondérant les normes euclidiennes carrées par les poids des types forestiers. Elle mesure la variabilité des densités de peuplement expliquée par la partition en types forestiers et elle est définie par :
@@ -206,7 +208,8 @@ On s'intéresse maintenant à l'interprétation des résultats trouvés. Nous ca
     \end{tabular}
     \centering
     \caption{Extrait du R² des variables}
-    \end{table}
+    \label{tab:statistiques Partie1 a rap avec II.1.b}
+\end{table}
 
 
     Nous remarquons numériquement que la variable la plus liée au type est gen25, tandis que la moins liée est gen6. 
@@ -295,13 +298,89 @@ En utilisant les propriétés de la trace et l'expression de $\Pi_{x^j}$, il sui
     &= \frac{\left\langle x^{j\prime},\Pi_Yx^{j}\right\rangle_W }{\left\lVert x^j\right\rVert^2_W }\\
     &= R^2(x^j\mid Y )
 \end{align*}
-Donc, nous pouvons conclure que $tr(\Pi_{x^{j}}\Pi_Y)$ 
+Donc, nous pouvons conclure que $tr(\Pi_{x^{j}}\Pi_Y)$ représente le $R^2$ d'une densité de population sachant son type forestier. C'est a dire que nous 
+mesurons la variabilité d'une espèce lié a un type forestier. \\
+Nous pouvons programmer les deux expressions du dessus. \\
+\begin{lstlisting}[caption=Extrait du code R, label= Question 1b]
+P_Y <- Y %*% solve(t(Y)%*% W %*% Y) %*% t(Y) %*% W
+P_X <- function(j){
+    # Calculer la projection de la colonne j de X
+    x_j <- X[, j, drop = FALSE]  # Pour que x_j reste une matrice
+    return(x_j %*% solve(t(x_j) %*% W %*% x_j) %*% t(x_j) %*% W)
+}
+#On calcule la trace du produit matriciel
+Tr_1 <- sum(diag(P_X(3) %*% P_Y))
+\end{lstlisting}
+Nous effectuons le calcul de la trace pour tout $j \in [1,27]$. Nous obtenons le tableau suivant. 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Especes & gen1  & gen6  & gen17 & gen25 \\ \hline
+    R²      & 0.072 & 0.008 & 0.096 & 0.184 \\ \hline
+    \end{tabular}
+    \centering
+    \caption{Extrait du R² des variables via le calcul de la trace}
+    \label{tab:statistiques 1.b}
+\end{table}
 
+\subsubsection{Calcul de $R$ et de $tr(R\Pi_Y)$ }
+\label{subsec:Question 1.c}
+De la même manière, nous programmons la matrice $R=XMX'W$, ainsi que $tr(R\Pi_Y)$.
+\begin{lstlisting}[caption=Extrait du code R, label= Question 1c]
+    R <- X %*% M %*% t(X) %*% W
+    Tr_2 <- sum(diag(R %*% P_Y))
+\end{lstlisting}
+Nous pouvons alors calculer la trace de la matrice demandé et nous obtenons.
+\begin{center}
+    $tr(R\Pi_Y)=0,069$
+\end{center}
+Nous pouvons interpréter $tr(R\Pi_Y)$ comme étant le coefficient $R^2$ suivant.
+\begin{center}
+    $R^2 = \frac{\text{Inertie inter-types}}{\text{Inertie totale}}$
+\end{center}
+\subsubsection{Interprétation des résultats }
+Nous avons trouver les mêmes résultats que dans la partie 1 du TP. Cependant, dans cette partie, nous avons utilisé des calculs différents.\\
+Nous pouvons rapprocher les résultats obtenus dans \autoref{tab:statistiques Partie1 a rap avec II.1.b} et dans \autoref{tab:statistiques 1.b}. En effet, nous avons bien
+les mêmes valeurs. De plus, le résultats du coefficient $R^2$ obtenu dans la partie \ref{subsec:Question 1.c} et celui obtenu dans la partie \ref{subsec : Inertie inter-types et coefficient} sont bien identique.
+\\En conclusion, avec deux méthodes de calculs différents, nous retrouvons bien les mêmes résultats.
+\subsection{Rapprochement avec la variable "geology"}
+Dans cette question, nous allons nous intéresser a la variable $Z$ "geology". Programmons de la même manière, les matrices demandées.
+\begin{lstlisting}[caption=Extrait du code R, label= Question 1c]
+    P_Z <- Z %*% solve(t(Z)%*% W %*% Z) %*% t(Z) %*% W
+    Tr_3 <- sum(diag(P_X(3) %*% P_Z))
+    Tr_4 <- sum(diag(R %*% P_Z))
+\end{lstlisting}
+Pour le calcul de $tr(\Pi_{x^j}\Pi_Z)$ nous obtenons les résultats suivant. 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|l|}
+    \hline
+    Especes & gen1  & gen6  & gen17 & gen25 \\ \hline
+    R²      & 0.096 & 0.009 & 0.035 & 0.323 \\ \hline
+    \end{tabular}
+    \centering
+    \caption{Extrait du R² des variables}
+\end{table}
+Nous pouvons calculer son expression pour l'interpréter statistiquement.
+\[
+ tr(\Pi_{x^{j}}\Pi_Z) = tr(x^{j}(x^{j\prime}Wx^{j})^{-1}x^{j\prime}W\Pi_Z) = \frac{\left\langle x^{j\prime},\Pi_Zx^{j}\right\rangle_W }{\left\lVert x^j\right\rVert^2_W }\\= R^2(x^j\mid Z )
+\]
+Nous trouvons que $tr(\Pi_{x^{j}}\Pi_Z)$ est le $R^2$ d’une densité de
+population sachant son type geologique. C’est a dire que nous mesurons la vari-
+abilitée d’une espèce lié a un type geologique.\\
+De plus, le calcul de $tr(R\Pi_Z)$ nous donne.
+\begin{center}
+    $tr(R\Pi_Z)=0,759$
+\end{center}
+Ce dernier représente la part de variabilité d'une espèce dans un type géologique. 
 
-\newpage
 \section{Conclusion}
+A écrire ensemble.
 
 \newpage
-\lstinputlisting{C:/Users/damie/Desktop/MASTER/ADM/tp/tp1/tex/TP1.R}
+\section{ANNEXE}
+\lstinputlisting{./TP1.R}
+\lstinputlisting{./Partie2.R}
 
 \end{document}

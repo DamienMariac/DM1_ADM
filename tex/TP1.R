@@ -1,6 +1,6 @@
 rm(list = ls())
 
-tab <- read.csv("C:/Users/damie/Desktop/MASTER/ADM/tp/tp1/Datagenus.csv", sep = ";")
+tab <- read.csv("./Datagenus.csv", sep = ";")
 data <- tab[1 :1000,]
 species_columns <- grep("gen", colnames(data), value = TRUE)
 
