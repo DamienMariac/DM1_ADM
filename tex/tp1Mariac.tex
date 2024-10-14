@@ -7,6 +7,8 @@
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
+\usepackage{verbatim}
+
 
 
 \lstset{
@@ -378,9 +380,22 @@ Ce dernier représente la part de variabilité d'une espèce dans un type géolo
 \section{Conclusion}
 A écrire ensemble.
 
+
+
+
+
+
+
+
 \newpage
 \section{ANNEXE}
-\lstinputlisting{./TP1.R}
- 
 
+\lstset{literate=%
+ {é}{{\'e}}1
+ {è}{{\`e}}1
+ {à}{{\`a}}1
+ {ù}{{\`u}}1
+}
+\lstinputlisting{./TP1.R}
+\lstinputlisting{Partie2.R}
 \end{document}

@@ -1,3 +1,4 @@
+
 # Partie 2 : 
 m(list = ls())
 data <- read.csv("./Datagenus.csv", sep=";")
