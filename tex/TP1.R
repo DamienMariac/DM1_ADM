@@ -103,3 +103,6 @@ R2_partition <- sum(poids * rowSums(barycentres_types^2)) / 27
 print(R2_partition)
 
 
+
+
+

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1728919225.78662 "/Users/utilisateur/Documents/DM1_ADM/tex/tp1Mariac.tex" "tp1Mariac.pdf" "tp1Mariac" 1728919226.71239 2
-  "/Users/utilisateur/Documents/DM1_ADM/tex/tp1Mariac.tex" 1728919146.64417 15609 8e35a89447d3c19cc0d4b3f5f148ba6b ""
+["pdflatex"] 1728919821.43191 "/Users/utilisateur/Documents/DM1_ADM/tex/tp1Mariac.tex" "tp1Mariac.pdf" "tp1Mariac" 1728919822.19862 0
+  "/Users/utilisateur/Documents/DM1_ADM/tex/tp1Mariac.tex" 1728919643.36302 15581 ac645efd42a9546ee08f00fb0c8ca3ea ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -112,15 +112,14 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1728568001.39114 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1728567892 8221428 2b61f3972a6cbd8853062d467e92364a ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "Partie2.R" 1728919022.04628 2503 eef0d3df6cc457c71264187e386fbf74 ""
-  "TP1.R" 1728919146.64412 2429 40228f2ec84ad1ada5320795f58442d1 ""
+  "TP1.R" 1728919820.47125 2432 aa0dba6ea0cb01e00dcf84948164c1d7 ""
   "logo_um_2022_rouge_RVB.png" 1728839384.20852 57225 0563e21fbd638a73c1b747b9a6e97692 ""
   "preuve_info_p1.png" 1728839384.20875 25701 e38994715464762a321a1ad15ec7a49c ""
   "ssd_logo.png" 1728567055.82877 11882 cab918edf4da7a396fed5ada81d0b6cf ""
-  "tp1Mariac.aux" 1728919226.57464 4697 6c3a975ce26e22d9b4cffde74e9c85c5 "pdflatex"
-  "tp1Mariac.out" 1728919226.57536 3310 ac9dc5a17a78773abb562a7ff74f0499 "pdflatex"
-  "tp1Mariac.tex" 1728919146.64417 15609 8e35a89447d3c19cc0d4b3f5f148ba6b ""
-  "tp1Mariac.toc" 1728919226.57559 1713 0f6d24b0a6f37bbfbf757c517bff7881 "pdflatex"
+  "tp1Mariac.aux" 1728919822.12479 4596 61e2fc8ff9223cf25892d116d4cb2789 "pdflatex"
+  "tp1Mariac.out" 1728919822.12551 3310 ac9dc5a17a78773abb562a7ff74f0499 "pdflatex"
+  "tp1Mariac.tex" 1728919643.36302 15581 ac645efd42a9546ee08f00fb0c8ca3ea ""
+  "tp1Mariac.toc" 1728919822.12571 1713 0f6d24b0a6f37bbfbf757c517bff7881 "pdflatex"
   (generated)
   "tp1Mariac.aux"
   "tp1Mariac.log"

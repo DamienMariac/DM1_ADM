@@ -126,6 +126,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang3.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT ./tp1Mariac.aux
+INPUT ./tp1Mariac.aux
+INPUT tp1Mariac.aux
 OUTPUT tp1Mariac.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -213,9 +216,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ts1cmtt.fd
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tctt0900.tfm
-INPUT ./Partie2.R
-INPUT ./Partie2.R
-INPUT ./Partie2.R
 INPUT tp1Mariac.aux
 INPUT ./tp1Mariac.out
 INPUT ./tp1Mariac.out
