@@ -1,4 +1,5 @@
 \documentclass{article}
+
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{float}
@@ -8,8 +9,15 @@
 \usepackage[utf8]{inputenc}
 \usepackage{hyperref}
 \usepackage{verbatim}
+\usepackage{fancyhdr}
 
+\usepackage[a4paper, margin=1in]{geometry}
 
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{MARIAC Damien, SCAIA Mattéo} % Gauche
+\fancyhead[R]{HAX711X} % Droite
 
 \lstset{
   language=R,
@@ -389,10 +397,11 @@ De plus, le calcul de $tr(R\Pi_Z)$ nous donne.
 Ce dernier représente la part de variabilité d'une espèce dans un type géologique. 
 
 \section{Conclusion}
-    On remarque que les deux méthodes donnent les memes resultats, bien que la méthode de la deuxieme partie est plus efficace  par la simplicité des formules.
-\\
-\\
-    Les resultats semblent cohérent, car la disparité des arbres est fortement impacté par leur demande en ressource. Le type géologique est donc naturellement un indice important dans la croissance de ces derniers.
+
+Nous avons observé que la disparité des arbres étant mieux expliqué par le type géologique.
+Cela etant cohérant, puisque la croissance des arbres demande une certaine quantité et qualité de ressource pouvant etre impacté par le type de sol.
+Ces demande pouvant varié d'un arbre à l'autre, cela expliquerait la disparité du type forestiers.
+
 
 
 

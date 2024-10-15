@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  15 OCT 2024 12:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.9.16)  15 OCT 2024 13:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -275,7 +275,35 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks28
 \verbatim@line=\toks29
 \verbatim@in@stream=\read2
-) (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+) (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip54
+\f@nch@O@elh=\skip55
+\f@nch@O@erh=\skip56
+\f@nch@O@olh=\skip57
+\f@nch@O@orh=\skip58
+\f@nch@O@elf=\skip59
+\f@nch@O@erf=\skip60
+\f@nch@O@olf=\skip61
+\f@nch@O@orf=\skip62
+) (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count294
+\Gm@cntv=\count295
+\c@Gm@tempcnt=\count296
+\Gm@bindingoffset=\dimen160
+\Gm@wd@mp=\dimen161
+\Gm@odd@mp=\dimen162
+\Gm@even@mp=\dimen163
+\Gm@layoutwidth=\dimen164
+\Gm@layoutheight=\dimen165
+\Gm@layouthoffset=\dimen166
+\Gm@layoutvoffset=\dimen167
+\Gm@dimlist=\toks30
+ (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
 File: lstlang2.sty 2023/02/27 1.9 listings language file
@@ -283,7 +311,7 @@ File: lstlang2.sty 2023/02/27 1.9 listings language file
 File: lstlang3.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
+\l__color_backend_stack_int=\count297
 \l__pdf_internal_box=\box57
 ) (tp1Mariac.aux
 
@@ -295,67 +323,102 @@ LaTeX Warning: Label `Question 1c' multiply defined.
 )
 \openout1 = `tp1Mariac.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
  (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
-\scratchdimen=\dimen160
+\scratchcounter=\count298
+\scratchdimen=\dimen168
 \scratchbox=\box58
-\nofMPsegments=\count296
-\nofMParguments=\count297
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen161
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
-\everyMPtoPDFconversion=\toks31
+\nofMPsegments=\count299
+\nofMParguments=\count300
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count301
+\MPscratchDim=\dimen169
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
+\everyMPtoPDFconversion=\toks32
 ) (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count301
-Package hyperref Info: Link coloring OFF on input line 31.
+\c@lstlisting=\count304
+Package hyperref Info: Link coloring OFF on input line 39.
  (tp1Mariac.out) (tp1Mariac.out)
 \@outlinefile=\write3
 \openout3 = `tp1Mariac.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
- (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+(C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
  (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <ssd_logo.png, id=79, 301.125pt x 103.38625pt>
 File: ssd_logo.png Graphic file (type png)
 <use ssd_logo.png>
-Package pdftex.def Info: ssd_logo.png  used on input line 37.
-(pdftex.def)             Requested size: 172.5pt x 59.22734pt.
+Package pdftex.def Info: ssd_logo.png  used on input line 45.
+(pdftex.def)             Requested size: 226.48395pt x 77.76192pt.
 <logo_um_2022_rouge_RVB.png, id=81, 194.6472pt x 71.0655pt>
 File: logo_um_2022_rouge_RVB.png Graphic file (type png)
 <use logo_um_2022_rouge_RVB.png>
-Package pdftex.def Info: logo_um_2022_rouge_RVB.png  used on input line 42.
-(pdftex.def)             Requested size: 172.5pt x 62.98132pt.
+Package pdftex.def Info: logo_um_2022_rouge_RVB.png  used on input line 50.
+(pdftex.def)             Requested size: 226.48395pt x 82.69084pt.
  [1
 
 {C:/Users/damie/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./ssd_logo.png> <./logo_um_2022_rouge_RVB.png>] (tp1Mariac.toc)
@@ -363,128 +426,108 @@ Package pdftex.def Info: logo_um_2022_rouge_RVB.png  used on input line 42.
 \openout4 = `tp1Mariac.toc'.
 
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 92--102
+Underfull \hbox (badness 10000) in paragraph at lines 100--110
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--102
+Underfull \hbox (badness 10000) in paragraph at lines 100--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--125
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 190.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--117
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 190.
 
- []
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 190.
 
 [4]
-Overfull \hbox (11.08412pt too wide) in paragraph at lines 174--179
-[][] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 182.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 182.
-
-
-Overfull \hbox (0.32338pt too wide) in paragraph at lines 192--193
-[]\OT1/cmr/m/n/10 Le co-ef-fi-cient $\OML/cmm/m/it/10 R[]$ \OT1/cmr/m/n/10 nous per-met d'^^Sevaluer dans quelle mesure les types forestiers
- []
-
-[5]
-Overfull \hbox (31.47906pt too wide) detected at line 227
-\OML/cmm/m/it/10 R[] \OT1/cmr/m/n/10 = [] = [] []\OMS/cmsy/m/n/10 k\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 k[] \OT1/cmr/m/n/10 = [] [] [](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] = [] [] [](\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] = [] [] \OML/cmm/m/it/10 R[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--231
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 231.
-<preuve_info_p1.png, id=140, 607.068pt x 69.25874pt>
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 239.
+<preuve_info_p1.png, id=136, 607.068pt x 69.25874pt>
 File: preuve_info_p1.png Graphic file (type png)
 <use preuve_info_p1.png>
-Package pdftex.def Info: preuve_info_p1.png  used on input line 241.
-(pdftex.def)             Requested size: 517.5pt x 59.04033pt.
+Package pdftex.def Info: preuve_info_p1.png  used on input line 249.
+(pdftex.def)             Requested size: 679.45184pt x 77.5164pt.
 
-Overfull \hbox (172.5pt too wide) in paragraph at lines 241--242
+Overfull \hbox (226.48395pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
-[6 <./preuve_info_p1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+[5 <./preuve_info_p1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
+Underfull \hbox (badness 10000) in paragraph at lines 273--275
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--294
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--294
+Underfull \hbox (badness 10000) in paragraph at lines 297--302
 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 313--317
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 321--325
 
  []
 
-[8]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 340.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 340.
+(hyperref)                removing `math shift' on input line 348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 340.
+(hyperref)                removing `math shift' on input line 348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Pi' on input line 340.
+(hyperref)                removing `math shift' on input line 348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 340.
+(hyperref)                removing `\Pi' on input line 348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 340.
+(hyperref)                removing `subscript' on input line 348.
 
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 392--396
 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 348.
 
-[10] (TP1.R
+[7] [8] (TP1.R
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 9.
  (C:\Users\damie\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [11] [12]) (Partie2.R [13] [14]) [15] (tp1Mariac.aux)
+) [9]) (Partie2.R [10]) [11] [12] (tp1Mariac.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -497,17 +540,17 @@ Package rerunfilecheck Info: File `tp1Mariac.out' has not changed.
 (rerunfilecheck)             Checksum: AC9DC5A17A78773ABB562A7FF74F0499;3310.
  ) 
 Here is how much of TeX's memory you used:
- 12532 strings out of 474486
- 188473 string characters out of 5743755
- 2312542 words of memory out of 5000000
- 34408 multiletter control sequences out of 15000+600000
+ 13197 strings out of 474486
+ 198658 string characters out of 5743755
+ 2529542 words of memory out of 5000000
+ 35064 multiletter control sequences out of 15000+600000
  567198 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,10n,79p,430b,1997s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,430b,2001s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\damie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0900.pk> <C:\Users\damie\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt9.pfb><C:/Users/damie/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tp1Mariac.pdf (15 pages, 343460 bytes).
+Output written on tp1Mariac.pdf (12 pages, 340394 bytes).
 PDF statistics:
- 532 PDF objects out of 1000 (max. 8388607)
- 249 named destinations out of 1000 (max. 500000)
+ 518 PDF objects out of 1000 (max. 8388607)
+ 246 named destinations out of 1000 (max. 500000)
  168 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,18 +2,18 @@
 \contentsline {section}{\numberline {2}Partie 1}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Inertie et barycentre}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Autour des types forestiers}{4}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Calcul des poids des types forestiers}{5}{subsubsection.2.2.1}%
-\contentsline {subsubsection}{\numberline {2.2.2}Calcul des barycentres des types forestiers}{5}{subsubsection.2.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.3}Calcul des normes euclidiennes carrées}{5}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.1}Calcul des poids des types forestiers}{4}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Calcul des barycentres des types forestiers}{4}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}Calcul des normes euclidiennes carrées}{4}{subsubsection.2.2.3}%
 \contentsline {subsubsection}{\numberline {2.2.4}Inertie inter-types et coefficient $R^2$}{5}{subsubsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.3}Liaisons}{6}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Partie 2}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Enoncer}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Rappel et calcul de projecteur}{7}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Rappel}{7}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Calcul de projecteur}{8}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Calcul de $R$ et de $tr(R\Pi _Y)$ }{9}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Interprétation des résultats }{9}{subsubsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.3}Rapprochement avec la variable "geology"}{9}{subsection.3.3}%
-\contentsline {section}{\numberline {4}Conclusion}{10}{section.4}%
-\contentsline {section}{\numberline {5}ANNEXE}{11}{section.5}%
+\contentsline {subsection}{\numberline {2.3}Liaisons}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Partie 2}{6}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Enoncer}{6}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Rappel et calcul de projecteur}{6}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Rappel}{6}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Calcul de projecteur}{7}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Calcul de $R$ et de $tr(R\Pi _Y)$ }{7}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Interprétation des résultats }{8}{subsubsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.3}Rapprochement avec la variable "geology"}{8}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Conclusion}{8}{section.4}%
+\contentsline {section}{\numberline {5}ANNEXE}{9}{section.5}%
