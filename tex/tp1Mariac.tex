@@ -228,7 +228,19 @@ R^2 = \frac{\text{Inertie externe}}{\text{Inertie totale}}
 
 On retrouve bien numériquement la même valeur :
 \\
-\includegraphics[width=1.5\textwidth]{preuve_info_p1.png}
+\begin{lstlisting}[caption=Extrait du code R, label= Question 1b]
+    R2_global <- sum(R2_variables) / length(R2_variables)
+    print(R2_global)
+    
+    R2_partition <- sum(poids * rowSums(barycentres_types^2)) / 27
+    print(R2_partition)
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.5\textwidth]{preuve_info_p1.png}
+\end{figure}
+
 
 \newpage
 \section{Partie 2}
@@ -244,39 +256,38 @@ Montrons l'égalité suivante. \\
 \[
 \forall j \hspace{0.5cm} \Pi_Y x^j = \Pi_{Y^c} x^j
 \]
-Tout d'abord, il est important de rappeler que les $x^j$ sont des variables qui sont
-centrées réduites. De plus, nous rappelons que 
+Nous rappelons que 
 \[
 Y^c = \Pi_{1^\perp} Y 
 \]
 \[
 \Pi_Y = \Pi_{Y^c} + \Pi_1
 \]
-A partir de ces deux résultats, nous pouvons conclure que. \\
+A partir de ces deux résultats, nous avons : \\
 \begin{align*}
     \Pi_Y x^j & = \Pi_{Y^c} x^j + \Pi_1 x^j \\
     &= \Pi_{Y^c} x^j
 \end{align*}
-Nous venons de montrer que pour tout $j$, 
+C'est à dire, pour tout $j$ : 
 \[
 \Pi_Y x^j = \Pi_{Y^c} x^j
 \]
-De plus, nous fixons $j$, et nous avons l'expression suivante.
+De plus, pour $j$ fixé, nous avons l'expression suivante.
 \[
 \left\lVert \Pi_Y x^j \right\rVert^2 _W = \left\langle \Pi_Y x^j,\Pi_Y x^j\right\rangle_W
 \]
-Or, il est important de préciser que
+Or,
 \[
 \Pi_Y x^j=\sum_{q = 1}^{p}\Pi_{y^q} x^j=\sum_{q = 1}^{p}y^q( \overline{x^j}^q - {\overline{x^j}} )  
 \]
-Ici, $\overline{x^j}$ représente la moyenne globale des $x^j$, $\overline{x^j}^q$ représente la moyenne pondérée des $x^j$ pour le type forestier $q$.\\
+Avec, $\overline{x^j}$ représente la moyenne globale des $x^j$, $\overline{x^j}^q$ représente la moyenne pondérée des $x^j$ pour le type forestier $q$.\\
 A partir de ces notations, nous avons l'expression suivante.
 \begin{align*}
     \left\lVert \Pi_Y x^j \right\rVert^2 _W &= \left\langle \Pi_Y x^j,\Pi_Y x^j\right\rangle_W \\
      &=  \sum_{q = 1}^{p}( \overline{x^j}^q - {\overline{x^j}} ) \sum_{ i= 1}^{p}( \overline{x^j}^i - {\overline{x^j}} )\left\langle y^q,y^i\right\rangle_W \\
      &= \sum_{q = 1}^{p}w^q( \overline{x^j}^q - {\overline{x^j}} )^2
 \end{align*}
-Nous pouvons conclure que $\left\lVert \Pi_Y x^j \right\rVert^2 _W$ s'interprete statistiquement comme
+Ici, $\left\lVert \Pi_Y x^j \right\rVert^2 _W$ s'interprete statistiquement comme
 étant la mesure des variation des $x^j$ dans un certain type forestier.
 \\
 \\
@@ -284,7 +295,7 @@ Nous pouvons conclure que $\left\lVert \Pi_Y x^j \right\rVert^2 _W$ s'interprete
 Le but de cette question est de trouver l'expression
 de $\Pi_Y$ et de calculer pour tout $j \in [1,27]$, $\Pi_{x^{j}}$ et $tr(\Pi_{x^{j}}\Pi_Y)$. Nous ferons la démonstration
 puis nous programmerons le résultat. \\
-Tout d'abord, on admet l'expression suivante.
+Tout d'abord, on rappel que :
 \[
 \Pi_Y = Y(Y'WY)^{-1}Y'W
 \]
@@ -292,7 +303,7 @@ Soit $j \in [1,27]$. Calculons les deux expressions donné précédemment.
 \[
 \Pi_{x^j}= x^{j}(x^{j\prime}Wx^{j})^{-1}x^{j\prime}W
 \]
-En utilisant les propriétés de la trace et l'expression de $\Pi_{x^j}$, il suit que 
+En utilisant les propriétés de la trace et l'expression de $\Pi_{x^j}$, il en suit 
 \begin{align*}
     tr(\Pi_{x^{j}}\Pi_Y) &= tr(x^{j}(x^{j\prime}Wx^{j})^{-1}x^{j\prime}W\Pi_Y) \\
     &=tr((x^{j\prime}Wx^{j})^{-1}x^{j\prime}W\Pi_Yx^{j})\\
@@ -300,7 +311,7 @@ En utilisant les propriétés de la trace et l'expression de $\Pi_{x^j}$, il sui
     &= \frac{\left\langle x^{j\prime},\Pi_Yx^{j}\right\rangle_W }{\left\lVert x^j\right\rVert^2_W }\\
     &= R^2(x^j\mid Y )
 \end{align*}
-Donc, nous pouvons conclure que $tr(\Pi_{x^{j}}\Pi_Y)$ représente le $R^2$ d'une densité de population sachant son type forestier. C'est a dire que nous 
+Donc $tr(\Pi_{x^{j}}\Pi_Y)$ représente le $R^2$ d'une densité de population sachant son type forestier. C'est a dire que nous 
 mesurons la variabilité d'une espèce lié a un type forestier. \\
 Nous pouvons programmer les deux expressions du dessus. \\
 \begin{lstlisting}[caption=Extrait du code R, label= Question 1b]
@@ -378,8 +389,10 @@ De plus, le calcul de $tr(R\Pi_Z)$ nous donne.
 Ce dernier représente la part de variabilité d'une espèce dans un type géologique. 
 
 \section{Conclusion}
-A écrire ensemble.
-
+    On remarque que les deux méthodes donnent les memes resultats, bien que la méthode de la deuxieme partie est plus efficace  par la simplicité des formules.
+\\
+\\
+    Les resultats semblent cohérent, car la disparité des arbres est fortement impacté par leur demande en ressource. Le type géologique est donc naturellement un indice important dans la croissance de ces derniers.
 
 
 
