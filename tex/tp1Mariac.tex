@@ -57,10 +57,11 @@
 \newpage
 
 \section{Introduction}
-On dispose d'un jeu de données présentant une étude de 27 espèces d'arbres dans 1000 parcelles de la forêt du Congo.
- Nous avons enlevé une ligne problématique dans notre jeu de données (ligne 1000 code TGC). Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt.
- Nous disposons dans notre jeu de données de 30 variables quantitatives dont : 27 variables de comptage des espèces, une sur la surface de la parcelle, une forestière et une géologique. Et d'une variable qualitative "code".
-  On arrondira les valeurs à $10^{-3}$.
+Nous disposons d'une base de données comprenant l'analyse de 27 espèces d'arbres réparties dans 1000 parcelles forestières situées dans la forêt du Congo.
+Il s'agit d'étudier la variabilité des densités de peuplement d'espèces arborées dans différentes parcelles de la forêt.  Nous avons enlevé une ligne problématique dans notre jeu de données (ligne 1000 code TGC).
+Nous disposons dans notre jeu de données de 28 variables quantitatives dont : 27 variables de comptage sur les espèces d'arbres et une sur la surface de la parcelle. De plus, notre base de données intègre deux variables qualitatives : l'une décrivant le type forestier et l'autre le type géologique.
+\\
+On arrondira nos calculs à $10^{-3}$.
 
 
 \begin{table}[H]
@@ -106,7 +107,7 @@ De plus, on supposera que le poids de nos parcelles est équipondéré.
 \indent\underline{Barycentre à l'origine :} (preuve théorique)
 \\
 \\
-Supposons que nous avons un ensemble de données \(X\) composé de \(n\) observations et \(p\) variables (dans notre cas 1000 et 27). Après le centrage et la réduction, la matrice transformée \(X'\) est définie par :
+Supposons que nous avons un ensemble de données \(X\) composé de \(n\) observations et \(p\) variables (dans notre cas 1000 et 27). Après le centrage et la réduction, les coefficients de notre matrice transformée \(X'\) sont définis par :
 \[
 x'_{ij} = \frac{x_{ij} - \bar{x}_j}{s_j}
 \]
@@ -280,7 +281,7 @@ C'est à dire, pour tout $j$ :
 \[
 \Pi_Y x^j = \Pi_{Y^c} x^j
 \]
-De plus, pour $j$ fixé, nous avons l'expression suivante.
+De plus, nous avons l'expression suivante.
 \[
 \left\lVert \Pi_Y x^j \right\rVert^2 _W = \left\langle \Pi_Y x^j,\Pi_Y x^j\right\rangle_W
 \]
@@ -392,15 +393,16 @@ De plus, le calcul de $tr(R\Pi_Z)$ nous donne.
 \begin{center}
     $tr(R\Pi_Z)=0,0759$
 \end{center}
-Ce dernier représente la part de variabilité d'une espèce dans un type géologique. 
+Ce dernier représente de variabilité d'une espèce dans un type géologique. 
 
+\newpage
 \section{Conclusion}
 
-Nous avons observé que la disparité des arbres est mieux expliquée par le type géologique. Cela étant cohérent, puisque la croissance des arbres nécessite une certaine quantité et qualité de ressources, qui peuvent être impactées par le type de sol. Ces demandes pouvant varier d’un arbre à l’autre, cela expliquerait la disparité des types forestiers.
-
-
-
-
+Au cours de notre analyse des peuplements forestiers du bassin du Congo,
+nous avons identifié des variations significatives qui peuvent être attribuées
+aux caractéristiques forestières et géologiques des sites étudiés.
+Nos résultats suggèrent que le type géologique présente une influence prépondérante sur ces disparités, 
+surpassant l'impact du type forestier.
 
 
 
