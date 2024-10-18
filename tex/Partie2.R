@@ -1,6 +1,6 @@
 
 # Partie 2 : 
-m(list = ls())
+rm(list = ls())
 data <- read.csv("./Datagenus.csv", sep=";")
 data2 <- data[1 :1000,] #On enlève la ligne qui pose problème
 
