@@ -18,7 +18,7 @@ moyenne_densité <- colMeans(densité)
 densités_centrées <- densité - matrix(moyenne_densité, nrow = nrow(densité), ncol = ncol(densité), byrow = TRUE)
 #On calcul les écarts-types
 ecarts_type_densité <- apply(densités_centrées, 2, sd)
-#Enfin on standarise nos densité
+#Enfin on standarise nos densités
 densités_standardisées <- densités_centrées / matrix(ecarts_type_densité, nrow = nrow(densité), ncol = ncol(densité), byrow = TRUE)
 
 ##### Commencement partie 2 #####
@@ -64,7 +64,7 @@ P_X <- function(j){
   x_j <- X[, j, drop = FALSE]  # S'assurer que x_j reste une matrice
   return(x_j %*% solve(t(x_j) %*% W %*% x_j) %*% t(x_j) %*% W)
 }
-#On calcule la trace du produit matriciel
+#On calcule la trace du produit matriciel avec j=25 par exemple.
 Tr_1 <- sum(diag(P_X(25) %*% P_Y))
 
 
@@ -74,7 +74,13 @@ R <- X %*% M %*% t(X) %*% W
 Tr_2 <- sum(diag(R %*% P_Y))
 
 # Question 2 
-# On programme Z et on calcul les traces demandé
+# On programme Z et on calcul les traces demandées
 P_Z <- Z %*% solve(t(Z)%*% W %*% Z) %*% t(Z) %*% W
 Tr_3 <- sum(diag(P_X(25) %*% P_Z))
 Tr_4 <- sum(diag(R %*% P_Z))
+# Calcul de Tr_3 avec tout les j
+L <- list()
+for(i in 1:27){
+  Tr_3 <- sum(diag(P_X(i) %*% P_Z))
+  L[i] <- Tr_3
+}

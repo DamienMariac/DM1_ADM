@@ -13,11 +13,11 @@
 
 \usepackage[a4paper, margin=1in]{geometry}
 
-\pagestyle{plain}
-\fancyhf{}
-
+\pagestyle{fancy} % Utilise le style fancy
+\fancyhf{} % Efface les en-têtes et pieds de page par défaut
 \fancyhead[L]{MARIAC Damien, SCAIA Mattéo} % Gauche
 \fancyhead[R]{HAX711X} % Droite
+\fancyfoot[C]{\thepage} % Numérotation centrée dans le pied de page
 
 \lstset{
   language=R,
@@ -65,6 +65,7 @@ On arrondira nos calculs à $10^{-3}$.
 
 
 \begin{table}[H]
+    \caption{Extrait du jeu de données Datagenus}
     \centering
     \begin{tabular}{|l|l|l|l|l|l|l|}
     \hline
@@ -76,7 +77,6 @@ On arrondira nos calculs à $10^{-3}$.
     3213 & 1    & 1    & 0    & 1      & 6       & 10.5    \\ \hline
     1861 & 19   & 3    & 1    & 7      & 3       & 20      \\ \hline
     \end{tabular}
-    \caption{Extrait du jeu de données Datagenus}
 \end{table}
 
 
@@ -155,12 +155,12 @@ p_i = \frac{\text{Nombre de parcelles du type } i}{1000}
 
 \begin{table}[H]
     \center
+    \caption{Tableau des poids forestiers}
     \begin{tabular}{|l|l|l|l|l|l|l|}
     \hline
     1     & 2     & 3     & 4     & 5     & 6     & 7     \\ \hline
     0.278 & 0.105 & 0.022 & 0.018 & 0.169 & 0.095 & 0.313 \\ \hline
     \end{tabular}
-    \caption{Tabeau des poids forestier}
     \end{table}
 
 
@@ -180,12 +180,13 @@ Nous obtenons alors une matrice $B \in \mathcal{M}_{7,27}(\mathbb{R})$
 Une fois les barycentres calculés, nous évaluons la distance de chaque barycentre à l'origine:
 
 \begin{table}[H]
+    \centering
+    \caption{normes carrées}
     \begin{tabular}{|l|l|l|l|l|l|l|l|}
     \hline
     type forestier       & 1         & 2         & 3         & 4      & 5     & 6     & 7     \\ \hline
     distance (en norme 2) & 0.772 & 3.228 & 4.279 & 21.210 & 1.092 & 1.443 & 1.628 \\ \hline
     \end{tabular}
-    \caption{normes carrée}
     \end{table}
 
 \subsubsection{Inertie inter-types et coefficient $R^2$}
@@ -212,14 +213,14 @@ On s'intéresse maintenant à l'interprétation des résultats trouvés. Nous ca
 
 \begin{table}[H]
     \centering
+    \caption{Extrait du R² des variables}
+    \label{tab:statistiques Partie1 a rap avec II.1.b}
     \begin{tabular}{|l|l|l|l|l|}
     \hline
     Especes & gen1  & gen6  & gen17 & gen25 \\ \hline
     R²      & 0.072 & 0.008 & 0.096 & 0.184 \\ \hline
     \end{tabular}
     \centering
-    \caption{Extrait du R² des variables}
-    \label{tab:statistiques Partie1 a rap avec II.1.b}
 \end{table}
 
 
@@ -297,7 +298,7 @@ A partir de ces notations, nous avons l'expression suivante.
      &= \sum_{q = 1}^{p}w^q( \overline{x^j}^q - {\overline{x^j}} )^2
 \end{align*}
 Ici, $\left\lVert \Pi_Y x^j \right\rVert^2 _W$ s'interprète statistiquement comme
-étant la mesure des variations des $x^j$ dans un certain type forestier.
+étant une mesure pondérée de la variation des $x^j$ dans un certain type forestier.
 \\
 \\
 \subsubsection{Calcul de projecteur}
@@ -364,8 +365,8 @@ Nous pouvons interpréter $tr(R\Pi_Y)$ comme étant le coefficient $R^2$ suivant
 \subsubsection{Interprétation des résultats }
 Nous avons trouvé les mêmes résultats que dans la partie 1 du TP. Cependant, dans cette partie, nous avons utilisé des calculs différents.\\
 Nous pouvons rapprocher les résultats obtenus dans \autoref{tab:statistiques Partie1 a rap avec II.1.b} et dans \autoref{tab:statistiques 1.b}. En effet, nous avons bien
-les mêmes valeurs. De plus, le résultats du coefficient $R^2$ obtenu dans la partie \ref{subsec:Question 1.c} et celui obtenu dans la partie \ref{subsec : Inertie inter-types et coefficient} sont bien identiques.
-\\En conclusion, avec deux méthodes de calculs différents, nous retrouvons bien les mêmes résultats.
+les mêmes valeurs. De plus, les résultats du coefficient $R^2$ obtenu dans la partie \ref{subsec:Question 1.c} et celui obtenu dans la partie \ref{subsec : Inertie inter-types et coefficient} sont bien identiques.
+\\En conclusion, avec deux méthodes de calcul différents, nous retrouvons bien les mêmes résultats.
 \subsection{Rapprochement avec la variable "geology"}
 Dans cette question, nous allons nous intéresser a la variable $Z$ "geology". Programmons de la même manière, les matrices demandées.
 \begin{lstlisting}[caption=Extrait du code R, label= Question 1c]
@@ -383,17 +384,19 @@ Pour le calcul de $tr(\Pi_{x^j}\Pi_Z)$ nous obtenons les résultats suivants.
     R²      & 0.096 & 0.009 & 0.035 & 0.323 \\ \hline
     \end{tabular}
 \end{table}
+D'après nos calculs numériques, nous observons que la variable la plus liée au type géologique est gen25 ($R^2 = 0,323$), tandis que celle qui est la moins liée est gen20 ($R^2=0,004$).\\\\
 Nous pouvons calculer son expression pour l'interpréter statistiquement.
 \[
  tr(\Pi_{x^{j}}\Pi_Z) = tr(x^{j}(x^{j\prime}Wx^{j})^{-1}x^{j\prime}W\Pi_Z) = \frac{\left\langle x^{j\prime},\Pi_Zx^{j}\right\rangle_W }{\left\lVert x^j\right\rVert^2_W }\\= R^2(x^j\mid Z )
 \]
 Nous trouvons que $tr(\Pi_{x^{j}}\Pi_Z)$ est le $R^2$ d’une densité de
-population sachant son type geologique. C’est-à-dire que nous mesurons la variabilitée d’une espèce liée à un type geologique.\\
+population sachant son type géologique. C’est-à-dire que nous mesurons la variabilité d’une espèce liée à un type géologique.\\\\
 De plus, le calcul de $tr(R\Pi_Z)$ nous donne.
 \begin{center}
     $tr(R\Pi_Z)=0,0759$
 \end{center}
-Ce dernier représente de variabilité d'une espèce dans un type géologique. 
+Ce dernier représente la variabilité d'une espèce dans un type géologique. C'est-à-dire que la variation
+d'une espèce s'explique à $7,59\%$ par le type géologique (contre $6,9\%$ pour le type forestier).
 
 \newpage
 \section{Conclusion}
