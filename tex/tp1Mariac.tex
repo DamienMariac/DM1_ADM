@@ -288,14 +288,14 @@ De plus, nous avons l'expression suivante.
 \]
 Or,
 \[
-\Pi_Y x^j=\sum_{q = 1}^{p}\Pi_{y^q} x^j=\sum_{q = 1}^{p}y^q( \overline{x^j}^q - {\overline{x^j}} )  
+\Pi_Y x^j=\sum_{q = 1}^{Q}\Pi_{y^q} x^j=\sum_{q = 1}^{Q}y^q( \overline{x^j}^q - {\overline{x^j}} )  
 \]
 Avec, $\overline{x^j}$ représentant la moyenne globale des $x^j$, $\overline{x^j}^q$ représentant la moyenne pondérée des $x^j$ pour le type forestier $q$.\\
 A partir de ces notations, nous avons l'expression suivante.
 \begin{align*}
     \left\lVert \Pi_Y x^j \right\rVert^2 _W &= \left\langle \Pi_Y x^j,\Pi_Y x^j\right\rangle_W \\
-     &=  \sum_{q = 1}^{p}( \overline{x^j}^q - {\overline{x^j}} ) \sum_{ i= 1}^{p}( \overline{x^j}^i - {\overline{x^j}} )\left\langle y^q,y^i\right\rangle_W \\
-     &= \sum_{q = 1}^{p}w^q( \overline{x^j}^q - {\overline{x^j}} )^2
+     &=  \sum_{q = 1}^{Q}( \overline{x^j}^q - {\overline{x^j}} ) \sum_{ i= 1}^{Q}( \overline{x^j}^i - {\overline{x^j}} )\left\langle y^q,y^i\right\rangle_W \\
+     &= \sum_{q = 1}^{Q}w^q( \overline{x^j}^q - {\overline{x^j}} )^2
 \end{align*}
 Ici, $\left\lVert \Pi_Y x^j \right\rVert^2 _W$ s'interprète statistiquement comme
 étant une mesure pondérée de la variation des $x^j$ dans un certain type forestier.
